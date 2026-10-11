@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#123a5a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="鹿児島旅行">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <title>鹿児島旅行 2026/11/14-15｜PWA V1</title>
+  <style>
+    :root{--navy:#123a5a;--blue:#176ca3;--blue-pale:#eaf5fb;--green:#087d62;--green-pale:#e2f5ef;--warm:#a55c20;--warm-pale:#fff3e8;--sand:#f7f4ed;--ink:#17212b;--muted:#5b6670;--line:#d5dde3;--card:#fff;--shadow:0 2px 10px rgba(17,43,65,.09)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;overflow-x:hidden;background:var(--sand);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;font-size:16px;line-height:1.55;-webkit-text-size-adjust:100%}button,a{font:inherit;-webkit-tap-highlight-color:transparent}button{cursor:pointer}[hidden]{display:none!important}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #ffba35;outline-offset:2px}.shell{width:min(100%,720px);margin:auto}.topbar{padding:max(16px,env(safe-area-inset-top)) 16px 14px;background:var(--navy);color:#fff}h1{margin:0;font-size:clamp(1.3rem,5vw,1.65rem);line-height:1.25}.subtitle{margin:4px 0 0;color:#d9ecf8;font-size:.92rem}.notice{margin:0;padding:10px 14px;border-bottom:1px solid #e7cf91;background:#fff4d9;color:#634400;font-size:.87rem}.day-nav{position:sticky;top:0;z-index:20;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 16px;background:rgba(247,244,237,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}.tab,.choice{min-height:46px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--navy);font-weight:800}.tab[aria-selected="true"]{border-color:var(--navy);background:var(--navy);color:#fff;box-shadow:0 2px 7px rgba(18,58,90,.25)}main{padding:14px 12px 36px}.day{display:grid;gap:16px}.info,.decision,details,.plan{border:1px solid var(--line);border-radius:14px;background:var(--card);box-shadow:var(--shadow)}.info{padding:14px}.info h2,.decision h2,.plan h2{margin:0 0 7px;color:var(--navy);font-size:1.08rem}.flight-grid{display:grid;gap:8px}.flight{padding:9px 10px;border-radius:10px;background:#f2f7fa;font-size:.92rem}.flight strong{display:inline-block;min-width:2.8em;color:var(--navy)}.section-title{margin:8px 4px 0;color:var(--navy);font-size:1.16rem;line-height:1.35}.lead{margin:-7px 4px 0;color:var(--muted);font-size:.9rem}.group{margin:12px 4px -4px;color:var(--navy);font-size:.88rem;font-weight:800;letter-spacing:.04em}.timeline{display:grid;gap:10px}.card{position:relative;min-height:86px;padding:12px 12px 12px 72px;border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow)}.card:before{position:absolute;top:18px;bottom:-15px;left:33px;width:2px;background:#c6d6e2;content:""}.timeline>.card:last-child:before{display:none}.icon{position:absolute;top:16px;left:16px;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--blue-pale);color:var(--navy);font-size:1.08rem}.walk .icon{background:#edf5ea;color:#377441}.food .icon{background:var(--warm-pale);color:var(--warm)}.visit .icon{background:#f1eefb;color:#61459b}.hotel .icon{background:#f0f2f4;color:#45545e}.wait .icon{background:#fff4d9;color:#79550a}.time{margin:0 0 3px;color:var(--navy);font-size:.88rem;font-weight:850;letter-spacing:.01em}.time span{color:#7890a1;padding:0 2px}.card h3{margin:0;color:#182b39;font-size:1rem;line-height:1.37}.mode,.note{margin:3px 0 0}.mode{color:var(--muted);font-size:.88rem}.note{color:#725610;font-size:.82rem}.badges,.actions{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}.badge{display:inline-flex;align-items:center;min-height:25px;padding:2px 9px;border-radius:999px;background:var(--green-pale);color:#075e4a;font-size:.77rem;font-weight:800;letter-spacing:.02em}.link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 13px;border:1px solid #a5c6da;border-radius:10px;background:#fff;color:#075e91;font-size:.88rem;font-weight:750;line-height:1.15;text-decoration:none}.link:hover{background:var(--blue-pale)}.decision{padding:15px}.decision p{margin:0;color:var(--muted);font-size:.9rem}.question{margin-top:14px}.question h3{margin:0 0 8px;font-size:1rem}.choices{display:grid;grid-template-columns:1fr 1fr;gap:8px}.choice{padding:8px;text-align:center}.choice small{display:block;color:var(--muted);font-size:.76rem;font-weight:500}.choice[aria-pressed="true"]{border-color:var(--navy);background:var(--blue-pale);box-shadow:inset 0 0 0 1px var(--navy)}.status{min-height:48px;margin-top:13px;padding:10px 12px;border-radius:10px;background:#f2f7fa;color:#385365;font-size:.9rem}.status.ready{background:var(--green-pale);color:#075e4a;font-weight:700}.plan{padding:15px;border-color:#8cc4b5}.kicker{margin:0 0 3px;color:var(--green);font-size:.83rem;font-weight:800}.variant{display:grid;gap:10px}.variant[hidden]{display:none!important}.in-plan .card{box-shadow:none}.in-plan .card:before{bottom:-15px}.return-block{display:grid;gap:10px}.warning{padding:10px 12px;border-radius:10px;background:#fff4d9;color:#70500a;font-size:.86rem}details{overflow:clip}summary{display:flex;align-items:center;min-height:52px;padding:12px 14px;color:var(--navy);font-weight:850;cursor:pointer;list-style:none}summary::-webkit-details-marker{display:none}summary:after{margin-left:auto;content:"＋";font-size:1.24rem}details[open] summary{border-bottom:1px solid var(--line)}details[open] summary:after{content:"−"}.detail-body{padding:0 14px 14px}.detail-list,.ramen-list{display:grid;gap:8px;margin-top:10px}.detail-link{width:100%;justify-content:flex-start}.detail-link:after{margin-left:auto;color:var(--muted);content:"↗"}.ramen{padding:10px;border-radius:11px;background:#f4f7f8}.ramen h3{margin:0;color:var(--navy);font-size:1rem}.ramen p{margin:3px 0 0;color:var(--muted);font-size:.84rem}.small{font-size:.84rem}.bottom{margin:2px 4px;color:var(--muted);font-size:.82rem;text-align:center}@media(min-width:600px){main{padding:20px 20px 40px}.day-nav{padding-inline:20px}.flight-grid{grid-template-columns:1fr 1fr}.card{padding-left:84px}.icon{left:21px}.choices{max-width:520px}}
+    .utility-details{margin-block:14px}
+    .update-banner{position:fixed;right:12px;bottom:max(12px,env(safe-area-inset-bottom));left:12px;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:12px;width:min(calc(100% - 24px),696px);margin-inline:auto;padding:10px 12px;border:1px solid #a5c6da;border-radius:12px;background:#fff;color:var(--navy);box-shadow:0 4px 18px rgba(17,43,65,.2);font-size:.9rem;font-weight:700}.update-banner button{min-height:44px;padding:8px 15px;border:0;border-radius:9px;background:var(--navy);color:#fff;font-weight:800;white-space:nowrap}
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="shell"><h1>鹿児島旅行 2026/11/14-15</h1><p class="subtitle">当日用しおり H2｜時刻は交通のみ予定発→予定着</p></div></header>
+  <p class="notice shell">11/13と当日朝に、運休・臨時ダイヤ・飲食店営業を再確認。空港連絡バスは満席時に次便案内となる場合があります。</p>
+  <nav class="day-nav shell" aria-label="日程切替"><button class="tab" type="button" role="tab" id="tab14" aria-controls="day14" aria-selected="true" data-day="14">11/14（土）</button><button class="tab" type="button" role="tab" id="tab15" aria-controls="day15" aria-selected="false" data-day="15">11/15（日）</button></nav>
+  <main class="shell">
+    <section class="day" id="day14" role="tabpanel" aria-labelledby="tab14">
+      <section class="info"><h2>基本情報</h2><div class="flight-grid"><div class="flight"><strong>往路</strong>11/14 07:05 伊丹 → 08:30 鹿児島</div><div class="flight"><strong>復路</strong>11/15 17:40 鹿児島 → 18:55 伊丹</div><div class="flight"><strong>宿泊</strong><a href="https://solaria-kagoshima.nnr-h.com/" target="_blank" rel="noopener noreferrer">ソラリア西鉄ホテル鹿児島（公式）</a></div><div class="flight"><strong>CUTE</strong>2日券・大人2,100円／人</div></div></section>
+      <h2 class="section-title">11/14（土）</h2><p class="lead">丸一 → 桜島 → むじゃき → 天文館散策 → あぢもり（19:00）</p>
+      <p class="group">自宅最寄り → 伊丹空港</p>
+      <section class="timeline" aria-label="11月14日 朝の移動">
+        <article class="card transport"><span class="icon">🚋</span><p class="time">05:13 <span>→</span> 05:21</p><h3>阪急塚口 → 十三</h3><p class="mode">阪急神戸線</p><div class="actions"><a class="link" href="https://www.hankyu.co.jp/station/html/HK-06_ko_1_h.html" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+        <article class="card transport"><span class="icon">🚋</span><p class="time">05:24 <span>→</span> 05:39</p><h3>十三 → 蛍池</h3><p class="mode">阪急宝塚線・宝塚方面</p><div class="actions"><a class="link" href="https://www.hankyu.co.jp/station/html/20250222/HK-03_ta_2_h.html" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+        <article class="card transport"><span class="icon">🚝</span><p class="time">05:55 <span>→</span> 05:58</p><h3>蛍池 → 大阪空港</h3><p class="mode">大阪モノレール</p><div class="actions"><a class="link" href="https://www.osaka-monorail.co.jp/station/r12_hotarugaike/timetable/" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+        <article class="card transport"><span class="icon">✈️</span><p class="time">07:05 <span>→</span> 08:30</p><h3>伊丹 → 鹿児島</h3><p class="mode">航空便（予約便）</p></article>
+      </section>
+      <p class="group">鹿児島空港 → 丸一</p>
+      <section class="timeline" aria-label="11月14日 到着と昼食">
+        <article class="card transport"><span class="icon">🚌</span><p class="time">09:00 <span>→</span> 09:38</p><h3>鹿児島空港 → 鹿児島中央駅</h3><p class="mode">空港連絡バス</p><div class="actions"><a class="link" href="https://nangoku-kotsu.com/wp-content/uploads/pdf/airport_2026_0401.pdf" target="_blank" rel="noopener noreferrer">時刻表</a></div><p class="note">CUTE対象外。09:00空港発は中央駅09:38着。</p></article>
+        <article class="card hotel"><span class="icon">🧳</span><p class="time">09:38頃 <span>→</span> 09:45頃</p><h3>ホテルで荷物預け</h3><p class="mode">ソラリア西鉄ホテル鹿児島</p></article>
+        <article class="card walk"><span class="icon">🚶</span><p class="time">09:45頃 <span>→</span> 09:50頃</p><h3>ホテル → 鹿児島中央駅前電停</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E9%B9%BF%E5%85%90%E5%B3%B6%E4%B8%AD%E5%A4%AE%E9%A7%85%E5%89%8D%E9%9B%BB%E5%81%9C" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+        <article class="card wait"><span class="icon">⏳</span><p class="time">09:50頃 <span>→</span> 10:38</p><h3>駅前で休憩・市電待ち</h3><p class="mode">待機</p></article>
+        <article class="card transport"><span class="icon">🚋</span><p class="time">10:38 <span>→</span> 10:43頃</p><h3>鹿児島中央駅前 → 高見馬場</h3><p class="mode">市電2系統・鹿児島駅前方面</p><div class="badges"><span class="badge">✓ CUTE</span></div><div class="actions"><a class="link" href="https://www.kotsu-city-kagoshima.jp/wp/timesearch/time_table.php?name=%E9%B9%BF%E5%85%90%E5%B3%B6%E4%B8%AD%E5%A4%AE%E9%A7%85%E5%89%8D&rosenId=1840,1841&syubetuId=" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+        <article class="card walk"><span class="icon">🚶</span><p class="time">10:43頃 <span>→</span> 10:50頃</p><h3>高見馬場 → 味のとんかつ丸一</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E5%91%B3%E3%81%AE%E3%81%A8%E3%82%93%E3%81%8B%E3%81%A4%E4%B8%B8%E4%B8%80%20%E9%B9%BF%E5%85%90%E5%B3%B6" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+        <article class="card wait"><span class="icon">⏳</span><p class="time">10:50頃 <span>→</span> 11:30</p><h3>丸一に並ぶ・開店待ち</h3><p class="mode">待機</p><p class="note">予約不可</p></article>
+        <article class="card food"><span class="icon">🍽️</span><p class="time">11:30 <span>→</span> 12:25</p><h3>味のとんかつ丸一で昼食</h3><p class="mode">食事</p><p class="note">店舗の公式HPは確認できないため、リンクは置かない。</p></article>
+      </section>
+      <p class="group">桜島</p>
+      <section class="timeline" aria-label="11月14日 桜島">
+        <article class="card walk"><span class="icon">🚶</span><p class="time">12:25 <span>→</span> 12:34頃</p><h3>丸一 → 高見馬場電停</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E9%AB%98%E8%A6%8B%E9%A6%AC%E5%A0%B4%E9%9B%BB%E5%81%9C" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+        <article class="card wait"><span class="icon">⏳</span><p class="time">12:34頃 <span>→</span> 12:36</p><h3>市電待ち</h3><p class="mode">待機</p></article>
+        <article class="card transport"><span class="icon">🚋</span><p class="time">12:36 <span>→</span> 12:42頃</p><h3>高見馬場 → 水族館口</h3><p class="mode">市電2系統・鹿児島駅前方面</p><div class="badges"><span class="badge">✓ CUTE</span></div><div class="actions"><a class="link" href="https://www.kotsu-city-kagoshima.jp/wp/timesearch/time_table.php?name=%E9%AB%98%E8%A6%8B%E9%A6%AC%E5%A0%B4&rosenId=1840,1841&syubetuId=" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+        <article class="card walk"><span class="icon">🚶</span><p class="time">12:42頃 <span>→</span> 12:55頃</p><h3>水族館口 → 鹿児島港フェリー乗り場</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E6%A1%9C%E5%B3%B6%E3%83%95%E3%82%A7%E3%83%AA%E3%83%BC%20%E9%B9%BF%E5%85%90%E5%B3%B6%E6%B8%AF%E3%83%95%E3%82%A7%E3%83%AA%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+        <article class="card wait"><span class="icon">⏳</span><p class="time">12:55頃 <span>→</span> 13:00</p><h3>フェリー乗船準備</h3><p class="mode">待機</p></article>
+        <article class="card transport"><span class="icon">⛴️</span><p class="time">13:00 <span>→</span> 13:15</p><h3>鹿児島港 → 桜島港</h3><p class="mode">桜島フェリー</p><div class="badges"><span class="badge">✓ CUTE</span></div><div class="actions"><a class="link" href="https://www.city.kagoshima.lg.jp/sakurajima-ferry/koro-jikoku/timetable.html" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+        <article class="card transport"><span class="icon">🚌</span><p class="time">13:30 <span>→</span> 13:36</p><h3>桜島港 → 桜島ビジターセンター</h3><p class="mode">サクラジマアイランドビュー</p><div class="badges"><span class="badge">✓ CUTE</span></div><div class="actions"><a class="link" href="https://www.kagoshima-yokanavi.jp/downloads/media/10606.pdf" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+        <article class="card visit"><span class="icon">⌂</span><p class="time">13:36 <span>→</span> 14:06</p><h3>桜島ビジターセンター観光</h3><p class="mode">観光</p><div class="actions"><a class="link" href="https://visitor.sakurajima.gr.jp/" target="_blank" rel="noopener noreferrer">公式</a></div></article>
+        <article class="card transport"><span class="icon">🚌</span><p class="time">14:06 <span>→</span> 14:40</p><h3>桜島ビジターセンター → 湯之平展望所</h3><p class="mode">サクラジマアイランドビュー</p><div class="badges"><span class="badge">✓ CUTE</span></div><div class="actions"><a class="link" href="https://www.kagoshima-yokanavi.jp/downloads/media/10606.pdf" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+        <article class="card visit"><span class="icon">⌂</span><p class="time">14:40 <span>→</span> 15:10</p><h3>湯之平展望所観光</h3><p class="mode">観光</p><div class="actions"><a class="link" href="https://www.kagoshima-yokanavi.jp/spot/10025" target="_blank" rel="noopener noreferrer">公式</a></div></article>
+        <article class="card transport"><span class="icon">🚌</span><p class="time">15:10 <span>→</span> 15:25</p><h3>湯之平展望所 → 桜島港</h3><p class="mode">サクラジマアイランドビュー</p><div class="badges"><span class="badge">✓ CUTE</span></div><div class="actions"><a class="link" href="https://www.kagoshima-yokanavi.jp/downloads/media/10606.pdf" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+        <article class="card transport"><span class="icon">⛴️</span><p class="time">15:45 <span>→</span> 16:00</p><h3>桜島港 → 鹿児島港</h3><p class="mode">桜島フェリー</p><div class="badges"><span class="badge">✓ CUTE</span></div><div class="actions"><a class="link" href="https://www.city.kagoshima.lg.jp/sakurajima-ferry/koro-jikoku/timetable.html" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+      </section>
+      <p class="group">天文館 → 夕食</p>
+      <section class="timeline" aria-label="11月14日 天文館と夕食">
+        <article class="card walk"><span class="icon">🚶</span><p class="time">16:00 <span>→</span> 16:12頃</p><h3>鹿児島港 → 水族館口</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E6%B0%B4%E6%97%8F%E9%A4%A8%E5%8F%A3%E9%9B%BB%E5%81%9C" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+        <article class="card transport"><span class="icon">🚋</span><p class="time">16:16 <span>→</span> 16:22頃</p><h3>水族館口 → 天文館通</h3><p class="mode">市電2系統・郡元方面</p><div class="badges"><span class="badge">✓ CUTE</span></div><div class="actions"><a class="link" href="https://www.kotsu-city-kagoshima.jp/wp/timesearch/time_table.php?name=%E6%B0%B4%E6%97%8F%E9%A4%A8%E5%8F%A3&rosenId=1840,1841&syubetuId=" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+        <article class="card walk"><span class="icon">🚶</span><p class="time">16:22頃 <span>→</span> 16:35</p><h3>天文館通電停 → 天文館むじゃき</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A9%E6%96%87%E9%A4%A8%E3%82%80%E3%81%98%E3%82%83%E3%81%8D" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+        <article class="card food"><span class="icon">🍧</span><p class="time">16:35 <span>→</span> 17:20</p><h3>天文館むじゃきで白くま</h3><p class="mode">食事</p><div class="actions"><a class="link" href="https://mujyaki.co.jp/" target="_blank" rel="noopener noreferrer">公式</a></div></article>
+      </section>
+      <section class="decision" aria-labelledby="evening-title"><h2 id="evening-title">17:20以降はどちらにする？</h2><p>基本案は天文館周辺を散策。疲労・雨天時はホテル休憩へ切り替え。</p><div class="question"><div class="choices"><button class="choice" type="button" data-evening="base" aria-pressed="true">基本案<small>散策してあぢもりへ</small></button><button class="choice" type="button" data-evening="hotel" aria-pressed="false">代替案<small>ホテル休憩を挟む</small></button></div></div></section>
+      <section class="variant" id="evening-base" aria-label="11月14日夕方 基本案">
+        <p class="group">基本案｜天文館散策</p><section class="timeline in-plan">
+          <article class="card walk"><span class="icon">🚶</span><p class="time">17:20 <span>→</span> 17:24頃</p><h3>天文館むじゃき → センテラス天文館</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E3%82%BB%E3%83%B3%E3%83%86%E3%83%A9%E3%82%B9%E5%A4%A9%E6%96%87%E9%A4%A8" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+          <article class="card visit"><span class="icon">⌂</span><p class="time">17:24頃 <span>→</span> 18:35頃</p><h3>センテラス天文館・天文館周辺散策</h3><p class="mode">散策</p><div class="actions"><a class="link" href="https://centerrace.com/" target="_blank" rel="noopener noreferrer">公式</a></div></article>
+          <article class="card walk"><span class="icon">🚶</span><p class="time">18:35頃 <span>→</span> 18:45頃</p><h3>センテラス天文館 → あぢもり</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E3%81%82%E3%81%A2%E3%82%82%E3%82%8A%20%E9%B9%BF%E5%85%90%E5%B3%B6" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+          <article class="card food"><span class="icon">🍽️</span><p class="time">19:00</p><h3>あぢもりで夕食</h3><p class="mode">食事（予約時間）</p><div class="actions"><a class="link" href="https://adimori.com/" target="_blank" rel="noopener noreferrer">公式</a></div></article>
+        </section>
+      </section>
+      <section class="variant" id="evening-hotel" hidden aria-label="11月14日夕方 ホテル休憩代替案">
+        <p class="group">代替案｜ホテル休憩</p><section class="timeline in-plan">
+          <article class="card walk"><span class="icon">🚶</span><p class="time">17:20 <span>→</span> 17:25頃</p><h3>天文館むじゃき → 天文館通電停</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A9%E6%96%87%E9%A4%A8%E9%80%9A%E9%9B%BB%E5%81%9C" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+          <article class="card transport"><span class="icon">🚋</span><p class="time">17:32 <span>→</span> 17:38頃</p><h3>天文館通 → 鹿児島中央駅前</h3><p class="mode">市電2系統・郡元方面</p><div class="badges"><span class="badge">✓ CUTE</span></div><div class="actions"><a class="link" href="https://www.kotsu-city-kagoshima.jp/wp/timesearch/time_table.php?name=%E5%A4%A9%E6%96%87%E9%A4%A8%E9%80%9A&rosenId=1840,1841&syubetuId=" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+          <article class="card walk"><span class="icon">🚶</span><p class="time">17:38頃 <span>→</span> 17:43頃</p><h3>鹿児島中央駅前電停 → ホテル</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E3%82%BD%E3%83%A9%E3%83%AA%E3%82%A2%E8%A5%BF%E9%89%84%E3%83%9B%E3%83%86%E3%83%AB%E9%B9%BF%E5%85%90%E5%B3%B6" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+          <article class="card hotel"><span class="icon">⌂</span><p class="time">17:43頃 <span>→</span> 18:20頃</p><h3>ホテル休憩</h3><p class="mode">休憩</p></article>
+          <article class="card walk"><span class="icon">🚶</span><p class="time">18:20頃 <span>→</span> 18:25頃</p><h3>ホテル → 鹿児島中央駅前電停</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E9%B9%BF%E5%85%90%E5%B3%B6%E4%B8%AD%E5%A4%AE%E9%A7%85%E5%89%8D%E9%9B%BB%E5%81%9C" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+          <article class="card transport"><span class="icon">🚋</span><p class="time">18:27 <span>→</span> 18:32頃</p><h3>鹿児島中央駅前 → 天文館通</h3><p class="mode">市電2系統・鹿児島駅前方面</p><div class="badges"><span class="badge">✓ CUTE</span></div><div class="actions"><a class="link" href="https://www.kotsu-city-kagoshima.jp/wp/timesearch/time_table.php?name=%E9%B9%BF%E5%85%90%E5%B3%B6%E4%B8%AD%E5%A4%AE%E9%A7%85%E5%89%8D&rosenId=1840,1841&syubetuId=" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+          <article class="card walk"><span class="icon">🚶</span><p class="time">18:32頃 <span>→</span> 18:42頃</p><h3>天文館通 → あぢもり</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E3%81%82%E3%81%A2%E3%82%82%E3%82%8A%20%E9%B9%BF%E5%85%90%E5%B3%B6" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+          <article class="card food"><span class="icon">🍽️</span><p class="time">19:00</p><h3>あぢもりで夕食</h3><p class="mode">食事（予約時間）</p><div class="actions"><a class="link" href="https://adimori.com/" target="_blank" rel="noopener noreferrer">公式</a></div></article>
+        </section>
+      </section>
+      <p class="group">夕食後の帰路</p><section class="timeline" aria-label="11月14日夕食後">
+        <article class="card walk"><span class="icon">🚶</span><p class="time">夕食後</p><h3>あぢもり → 天文館通電停</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A9%E6%96%87%E9%A4%A8%E9%80%9A%E9%9B%BB%E5%81%9C" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+        <article class="card transport"><span class="icon">🚋</span><p class="time">夕食後</p><h3>天文館通 → 鹿児島中央駅前</h3><p class="mode">市電2系統・郡元方面</p><div class="badges"><span class="badge">✓ CUTE</span></div><div class="actions"><a class="link" href="https://www.kotsu-city-kagoshima.jp/wp/timesearch/time_table.php?name=%E5%A4%A9%E6%96%87%E9%A4%A8%E9%80%9A&rosenId=1840,1841&syubetuId=" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+        <article class="card walk"><span class="icon">🚶</span><p class="time">夕食後</p><h3>鹿児島中央駅前電停 → ホテル</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E3%82%BD%E3%83%A9%E3%83%AA%E3%82%A2%E8%A5%BF%E9%89%84%E3%83%9B%E3%83%86%E3%83%AB%E9%B9%BF%E5%85%90%E5%B3%B6" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+        <article class="card hotel"><span class="icon">⌂</span><p class="time">夕食後</p><h3>ホテル宿泊</h3><p class="mode">宿泊</p></article>
+      </section>
+    </section>
+
+    <section class="day" id="day15" role="tabpanel" aria-labelledby="tab15" hidden>
+      <h2 class="section-title">11/15（日）</h2><p class="lead">末よし退店時刻と、優先する観光先で1案だけを表示</p>
+      <p class="group">共通工程｜ホテル → 末よし</p><section class="timeline" aria-label="11月15日 共通工程">
+        <article class="card hotel"><span class="icon">🧳</span><p class="time">08:45 <span>→</span> 09:05頃</p><h3>ホテルでチェックアウト・荷物預け</h3><p class="mode">ホテル</p></article>
+        <article class="card walk"><span class="icon">🚶</span><p class="time">09:05頃 <span>→</span> 09:10頃</p><h3>ホテル → 鹿児島中央駅前電停</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E9%B9%BF%E5%85%90%E5%B3%B6%E4%B8%AD%E5%A4%AE%E9%A7%85%E5%89%8D%E9%9B%BB%E5%81%9C" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+        <article class="card wait"><span class="icon">⏳</span><p class="time">09:10頃 <span>→</span> 09:12</p><h3>市電待ち</h3><p class="mode">待機</p></article>
+        <article class="card transport"><span class="icon">🚋</span><p class="time">09:12 <span>→</span> 09:17頃</p><h3>鹿児島中央駅前 → 天文館通</h3><p class="mode">市電2系統・鹿児島駅前方面</p><div class="badges"><span class="badge">✓ CUTE</span></div><div class="actions"><a class="link" href="https://www.kotsu-city-kagoshima.jp/wp/timesearch/time_table.php?name=%E9%B9%BF%E5%85%90%E5%B3%B6%E4%B8%AD%E5%A4%AE%E9%A7%85%E5%89%8D&rosenId=1840,1841&syubetuId=" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+        <article class="card walk"><span class="icon">🚶</span><p class="time">09:17頃 <span>→</span> 09:27頃</p><h3>天文館通 → うなぎの末よし</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E3%81%86%E3%81%AA%E3%81%8E%E3%81%AE%E6%9C%AB%E3%82%88%E3%81%97" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+        <article class="card wait"><span class="icon">⏳</span><p class="time">09:27頃 <span>→</span> 10:30</p><h3>末よしに並ぶ</h3><p class="mode">待機</p></article>
+        <article class="card food"><span class="icon">🍽️</span><p class="time">10:30 <span>→</span> 11:15頃／11:45頃</p><h3>うなぎの末よしで昼食</h3><p class="mode">食事</p><div class="actions"><a class="link" href="https://unagi-sueyoshi.com/" target="_blank" rel="noopener noreferrer">公式</a></div></article>
+      </section>
+      <section class="decision" aria-labelledby="route-title"><h2 id="route-title">末よしを出た時刻は？</h2><p>2つを選ぶと、条件に合うA〜Dの1案だけを表示します。</p><div class="question"><h3>退店時刻</h3><div class="choices"><button class="choice" type="button" data-exit="early" aria-pressed="false">11:15頃<small>順調</small></button><button class="choice" type="button" data-exit="late" aria-pressed="false">11:45頃<small>遅延</small></button></div></div><div class="question"><h3>どちらを優先する？</h3><div class="choices"><button class="choice" type="button" data-priority="sengan" aria-pressed="false">仙巌園</button><button class="choice" type="button" data-priority="shiroyama" aria-pressed="false">城山・西郷史跡</button></div></div><p class="status" id="route-status" aria-live="polite">2つ選ぶとおすすめ工程を表示します。</p></section>
+
+      <section class="plan" id="plan-A" hidden><p class="kicker">順調 × 仙巌園</p><h2>仙巌園コース</h2><div class="timeline in-plan">
+        <article class="card walk"><span class="icon">🚶</span><p class="time">11:15頃 <span>→</span> 11:40頃</p><h3>末よし → 西郷隆盛銅像</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E8%A5%BF%E9%83%B7%E9%9A%86%E7%9B%9B%E9%8A%85%E5%83%8F" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+        <article class="card visit"><span class="icon">⌂</span><p class="time">11:40頃 <span>→</span> 11:44</p><h3>西郷隆盛銅像見学</h3><p class="mode">見学</p><div class="actions"><a class="link" href="https://www.city.kagoshima.lg.jp/kensetu/kensetukanri/kouenryokuka/bunka/sports/shisetsu/saigotakamori.html" target="_blank" rel="noopener noreferrer">公式</a></div></article>
+        <article class="card transport"><span class="icon">🚌</span><p class="time">11:44 <span>→</span> 12:19</p><h3>西郷銅像前 → 仙巌園（磯庭園）前</h3><p class="mode">カゴシマシティビュー</p><div class="badges"><span class="badge">✓ CUTE</span></div><div class="actions"><a class="link" href="https://www.kotsu-city-kagoshima.jp/wp/timesearch/time_table.php?name=%E8%A5%BF%E9%83%B7%E9%8A%85%E5%83%8F%E5%89%8D%EF%BC%88%E4%B8%AD%E5%A4%AE%E5%85%AC%E5%9C%92%E5%81%B4%EF%BC%89%28%E3%82%B7%E3%83%86%E3%82%A3%E3%83%93%E3%83%A5%E3%83%BC%29&rosenId=1680&syubetuId=0" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+        <article class="card visit"><span class="icon">⌂</span><p class="time">12:19 <span>→</span> 13:49</p><h3>仙巌園観光</h3><p class="mode">観光</p><div class="actions"><a class="link" href="https://www.senganen.jp/" target="_blank" rel="noopener noreferrer">公式</a></div></article>
+        <article class="card transport"><span class="icon">🚌</span><p class="time">13:49 <span>→</span> 14:20</p><h3>仙巌園（磯庭園）前 → 鹿児島中央駅</h3><p class="mode">カゴシマシティビュー</p><div class="badges"><span class="badge">✓ CUTE</span></div><div class="actions"><a class="link" href="https://www.kotsu-city-kagoshima.jp/wp/timesearch/time_table.php?name=%E4%BB%99%E5%B7%96%E5%9C%92%28%E7%A3%AF%E5%BA%AD%E5%9C%92%29%28%E3%82%B7%E3%83%86%E3%82%A3%E3%83%93%E3%83%A5%E3%83%BC%29&rosenId=1680&syubetuId=0" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+        <article class="card walk"><span class="icon">🚶</span><p class="time">14:20頃 <span>→</span> 14:25頃</p><h3>鹿児島ラーメン店へ徒歩</h3><p class="mode">徒歩（候補により前後）</p><p class="note">候補一覧から駅周辺店を選択。</p></article>
+        <article class="card food"><span class="icon">🍜</span><p class="time">14:25頃 <span>→</span> 14:50頃</p><h3>鹿児島ラーメン</h3><p class="mode">食事（店舗未確定）</p><p class="note">14:35以降の着席・行列なら省略して荷物回収へ。</p></article>
+        <article class="card walk"><span class="icon">🚶</span><p class="time">14:50頃 <span>→</span> 14:55頃</p><h3>ラーメン店 → ホテル</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E3%82%BD%E3%83%A9%E3%83%AA%E3%82%A2%E8%A5%BF%E9%89%84%E3%83%9B%E3%83%86%E3%83%AB%E9%B9%BF%E5%85%90%E5%B3%B6" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+        <article class="card hotel"><span class="icon">🧳</span><p class="time">14:55頃 <span>→</span> 15:05頃</p><h3>ホテルで荷物回収</h3><p class="mode">ホテル</p></article>
+        <article class="card walk"><span class="icon">🚶</span><p class="time">15:05頃 <span>→</span> 15:10頃</p><h3>ホテル内・同建物の空港バスターミナルへ移動</h3><p class="mode">徒歩</p></article>
+        <article class="card transport"><span class="icon">🚌</span><p class="time">15:25 <span>→</span> 16:05</p><h3>鹿児島中央駅 → 鹿児島空港</h3><p class="mode">空港連絡バス</p><div class="actions"><a class="link" href="https://nangoku-kotsu.com/wp-content/uploads/pdf/airport_2026_0401.pdf" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+      </div></section>
+      <section class="plan" id="plan-B" hidden><p class="kicker">遅延 × 仙巌園</p><h2>仙巌園コース（短縮観光）</h2><div class="timeline in-plan">
+        <article class="card walk"><span class="icon">🚶</span><p class="time">11:45頃 <span>→</span> 12:10頃</p><h3>末よし → 西郷隆盛銅像</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E8%A5%BF%E9%83%B7%E9%9A%86%E7%9B%9B%E9%8A%85%E5%83%8F" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+        <article class="card visit"><span class="icon">⌂</span><p class="time">12:10頃 <span>→</span> 12:14</p><h3>西郷隆盛銅像見学</h3><p class="mode">見学</p><div class="actions"><a class="link" href="https://www.city.kagoshima.lg.jp/kensetu/kensetukanri/kouenryokuka/bunka/sports/shisetsu/saigotakamori.html" target="_blank" rel="noopener noreferrer">公式</a></div></article>
+        <article class="card transport"><span class="icon">🚌</span><p class="time">12:14 <span>→</span> 12:49</p><h3>西郷銅像前 → 仙巌園（磯庭園）前</h3><p class="mode">カゴシマシティビュー</p><div class="badges"><span class="badge">✓ CUTE</span></div><div class="actions"><a class="link" href="https://www.kotsu-city-kagoshima.jp/wp/timesearch/time_table.php?name=%E8%A5%BF%E9%83%B7%E9%8A%85%E5%83%8F%E5%89%8D%EF%BC%88%E4%B8%AD%E5%A4%AE%E5%85%AC%E5%9C%92%E5%81%B4%EF%BC%89%28%E3%82%B7%E3%83%86%E3%82%A3%E3%83%93%E3%83%A5%E3%83%BC%29&rosenId=1680&syubetuId=0" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+        <article class="card visit"><span class="icon">⌂</span><p class="time">12:49 <span>→</span> 13:49</p><h3>仙巌園観光（短縮）</h3><p class="mode">観光</p><div class="actions"><a class="link" href="https://www.senganen.jp/" target="_blank" rel="noopener noreferrer">公式</a></div></article>
+        <article class="card transport"><span class="icon">🚌</span><p class="time">13:49 <span>→</span> 14:20</p><h3>仙巌園（磯庭園）前 → 鹿児島中央駅</h3><p class="mode">カゴシマシティビュー</p><div class="badges"><span class="badge">✓ CUTE</span></div><div class="actions"><a class="link" href="https://www.kotsu-city-kagoshima.jp/wp/timesearch/time_table.php?name=%E4%BB%99%E5%B7%96%E5%9C%92%28%E7%A3%AF%E5%BA%AD%E5%9C%92%29%28%E3%82%B7%E3%83%86%E3%82%A3%E3%83%93%E3%83%A5%E3%83%BC%29&rosenId=1680&syubetuId=0" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+        <article class="card walk"><span class="icon">🚶</span><p class="time">14:20頃 <span>→</span> 14:25頃</p><h3>鹿児島ラーメン店へ徒歩</h3><p class="mode">徒歩（候補により前後）</p></article>
+        <article class="card food"><span class="icon">🍜</span><p class="time">14:25頃 <span>→</span> 14:50頃</p><h3>鹿児島ラーメン</h3><p class="mode">食事（店舗未確定）</p><p class="note">14:35以降の着席・行列なら省略。</p></article>
+        <article class="card walk"><span class="icon">🚶</span><p class="time">14:50頃 <span>→</span> 14:55頃</p><h3>ラーメン店 → ホテル</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E3%82%BD%E3%83%A9%E3%83%AA%E3%82%A2%E8%A5%BF%E9%89%84%E3%83%9B%E3%83%86%E3%83%AB%E9%B9%BF%E5%85%90%E5%B3%B6" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+        <article class="card hotel"><span class="icon">🧳</span><p class="time">14:55頃 <span>→</span> 15:05頃</p><h3>ホテルで荷物回収</h3><p class="mode">ホテル</p></article>
+        <article class="card walk"><span class="icon">🚶</span><p class="time">15:05頃 <span>→</span> 15:10頃</p><h3>ホテル内・同建物の空港バスターミナルへ移動</h3><p class="mode">徒歩</p></article>
+        <article class="card transport"><span class="icon">🚌</span><p class="time">15:25 <span>→</span> 16:05</p><h3>鹿児島中央駅 → 鹿児島空港</h3><p class="mode">空港連絡バス</p><div class="actions"><a class="link" href="https://nangoku-kotsu.com/wp-content/uploads/pdf/airport_2026_0401.pdf" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+      </div></section>
+      <section class="plan" id="plan-C" hidden><p class="kicker">順調 × 城山・西郷史跡</p><h2>城山・西郷史跡コース</h2><div class="timeline in-plan">
+        <article class="card walk"><span class="icon">🚶</span><p class="time">11:15頃 <span>→</span> 11:40頃</p><h3>末よし → 西郷隆盛銅像</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E8%A5%BF%E9%83%B7%E9%9A%86%E7%9B%9B%E9%8A%85%E5%83%8F" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+        <article class="card visit"><span class="icon">⌂</span><p class="time">11:40頃 <span>→</span> 11:44</p><h3>西郷隆盛銅像見学</h3><p class="mode">見学</p><div class="actions"><a class="link" href="https://www.city.kagoshima.lg.jp/kensetu/kensetukanri/kouenryokuka/bunka/sports/shisetsu/saigotakamori.html" target="_blank" rel="noopener noreferrer">公式</a></div></article>
+        <article class="card transport"><span class="icon">🚌</span><p class="time">11:44 <span>→</span> 11:54</p><h3>西郷銅像前 → 城山</h3><p class="mode">カゴシマシティビュー</p><div class="badges"><span class="badge">✓ CUTE</span></div><div class="actions"><a class="link" href="https://www.kotsu-city-kagoshima.jp/wp/timesearch/time_table.php?name=%E8%A5%BF%E9%83%B7%E9%8A%85%E5%83%8F%E5%89%8D%EF%BC%88%E4%B8%AD%E5%A4%AE%E5%85%AC%E5%9C%92%E5%81%B4%EF%BC%89%28%E3%82%B7%E3%83%86%E3%82%A3%E3%83%93%E3%83%A5%E3%83%BC%29&rosenId=1680&syubetuId=0" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+        <article class="card visit"><span class="icon">⌂</span><p class="time">11:54 <span>→</span> 12:24</p><h3>城山展望台観光</h3><p class="mode">観光</p><div class="actions"><a class="link" href="https://www.kagoshima-yokanavi.jp/spot/10002" target="_blank" rel="noopener noreferrer">公式</a></div></article>
+        <article class="card transport"><span class="icon">🚌</span><p class="time">12:24 <span>→</span> 12:26</p><h3>城山 → 西郷洞窟前</h3><p class="mode">カゴシマシティビュー・仙巌園方面</p><div class="badges"><span class="badge">✓ CUTE</span></div><div class="actions"><a class="link" href="https://www.kotsu-city-kagoshima.jp/wp/timesearch/time_table.php?name=%E5%9F%8E%E5%B1%B1%28%E3%82%B7%E3%83%86%E3%82%A3%E3%83%93%E3%83%A5%E3%83%BC%29&rosenId=1680&syubetuId=0" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+        <article class="card visit"><span class="icon">⌂</span><p class="time">12:26 <span>→</span> 12:56</p><h3>西郷洞窟見学</h3><p class="mode">見学</p><div class="actions"><a class="link" href="https://www.kagoshima-kankou.com/guide/70354" target="_blank" rel="noopener noreferrer">公式</a></div></article>
+        <article class="card transport"><span class="icon">🚌</span><p class="time">12:56 <span>→</span> 13:20</p><h3>西郷洞窟前 → 鹿児島中央駅</h3><p class="mode">カゴシマシティビュー（循環）</p><div class="badges"><span class="badge">✓ CUTE</span></div><div class="actions"><a class="link" href="https://www.kotsu-city-kagoshima.jp/wp/timesearch/time_table.php?name=%E8%A5%BF%E9%83%B7%E6%B4%9E%E7%AA%9F%E5%89%8D%28%E4%BB%99%E5%B7%8C%E5%9C%92%E6%96%B9%E9%9D%A2%E5%90%91%E3%81%91%29%28%E3%82%B7%E3%83%86%E3%82%A3%E3%83%93%E3%83%A5%E3%83%BC%29&rosenId=1680&syubetuId=0" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+        <article class="card walk"><span class="icon">🚶</span><p class="time">13:20頃 <span>→</span> 13:25頃</p><h3>鹿児島ラーメン店へ徒歩</h3><p class="mode">徒歩（候補により前後）</p></article>
+        <article class="card food"><span class="icon">🍜</span><p class="time">13:25頃 <span>→</span> 14:10頃</p><h3>鹿児島ラーメン</h3><p class="mode">食事（店舗未確定）</p><p class="note">13:45以降の着席・行列なら省略。</p></article>
+        <article class="card walk"><span class="icon">🚶</span><p class="time">14:10頃 <span>→</span> 14:15頃</p><h3>ラーメン店 → ホテル</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E3%82%BD%E3%83%A9%E3%83%AA%E3%82%A2%E8%A5%BF%E9%89%84%E3%83%9B%E3%83%86%E3%83%AB%E9%B9%BF%E5%85%90%E5%B3%B6" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+        <article class="card hotel"><span class="icon">🧳</span><p class="time">14:15頃 <span>→</span> 14:25頃</p><h3>ホテルで荷物回収</h3><p class="mode">ホテル</p></article>
+        <article class="card walk"><span class="icon">🚶</span><p class="time">14:25頃 <span>→</span> 14:30頃</p><h3>ホテル内・同建物の空港バスターミナルへ移動</h3><p class="mode">徒歩</p></article>
+        <article class="card transport"><span class="icon">🚌</span><p class="time">15:25 <span>→</span> 16:05</p><h3>鹿児島中央駅 → 鹿児島空港</h3><p class="mode">空港連絡バス</p><div class="actions"><a class="link" href="https://nangoku-kotsu.com/wp-content/uploads/pdf/airport_2026_0401.pdf" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+      </div></section>
+      <section class="plan" id="plan-D" hidden><p class="kicker">遅延 × 城山・西郷史跡</p><h2>城山・西郷史跡コース（短縮）</h2><div class="timeline in-plan">
+        <article class="card walk"><span class="icon">🚶</span><p class="time">11:45頃 <span>→</span> 12:10頃</p><h3>末よし → 西郷隆盛銅像</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E8%A5%BF%E9%83%B7%E9%9A%86%E7%9B%9B%E9%8A%85%E5%83%8F" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+        <article class="card visit"><span class="icon">⌂</span><p class="time">12:10頃 <span>→</span> 12:14</p><h3>西郷隆盛銅像見学</h3><p class="mode">見学</p><div class="actions"><a class="link" href="https://www.city.kagoshima.lg.jp/kensetu/kensetukanri/kouenryokuka/bunka/sports/shisetsu/saigotakamori.html" target="_blank" rel="noopener noreferrer">公式</a></div></article>
+        <article class="card transport"><span class="icon">🚌</span><p class="time">12:14 <span>→</span> 12:24</p><h3>西郷銅像前 → 城山</h3><p class="mode">カゴシマシティビュー</p><div class="badges"><span class="badge">✓ CUTE</span></div><div class="actions"><a class="link" href="https://www.kotsu-city-kagoshima.jp/wp/timesearch/time_table.php?name=%E8%A5%BF%E9%83%B7%E9%8A%85%E5%83%8F%E5%89%8D%EF%BC%88%E4%B8%AD%E5%A4%AE%E5%85%AC%E5%9C%92%E5%81%B4%EF%BC%89%28%E3%82%B7%E3%83%86%E3%82%A3%E3%83%93%E3%83%A5%E3%83%BC%29&rosenId=1680&syubetuId=0" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+        <article class="card visit"><span class="icon">⌂</span><p class="time">12:24 <span>→</span> 12:54</p><h3>城山展望台観光</h3><p class="mode">観光</p><div class="actions"><a class="link" href="https://www.kagoshima-yokanavi.jp/spot/10002" target="_blank" rel="noopener noreferrer">公式</a></div></article>
+        <article class="card transport"><span class="icon">🚌</span><p class="time">12:54 <span>→</span> 12:56</p><h3>城山 → 西郷洞窟前</h3><p class="mode">カゴシマシティビュー・仙巌園方面</p><div class="badges"><span class="badge">✓ CUTE</span></div><div class="actions"><a class="link" href="https://www.kotsu-city-kagoshima.jp/wp/timesearch/time_table.php?name=%E5%9F%8E%E5%B1%B1%28%E3%82%B7%E3%83%86%E3%82%A3%E3%83%93%E3%83%A5%E3%83%BC%29&rosenId=1680&syubetuId=0" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+        <article class="card visit"><span class="icon">⌂</span><p class="time">12:56 <span>→</span> 13:26</p><h3>西郷洞窟見学</h3><p class="mode">見学</p><div class="actions"><a class="link" href="https://www.kagoshima-kankou.com/guide/70354" target="_blank" rel="noopener noreferrer">公式</a></div></article>
+        <article class="card transport"><span class="icon">🚌</span><p class="time">13:26 <span>→</span> 13:50</p><h3>西郷洞窟前 → 鹿児島中央駅</h3><p class="mode">カゴシマシティビュー（循環）</p><div class="badges"><span class="badge">✓ CUTE</span></div><div class="actions"><a class="link" href="https://www.kotsu-city-kagoshima.jp/wp/timesearch/time_table.php?name=%E8%A5%BF%E9%83%B7%E6%B4%9E%E7%AA%9F%E5%89%8D%28%E4%BB%99%E5%B7%8C%E5%9C%92%E6%96%B9%E9%9D%A2%E5%90%91%E3%81%91%29%28%E3%82%B7%E3%83%86%E3%82%A3%E3%83%93%E3%83%A5%E3%83%BC%29&rosenId=1680&syubetuId=0" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+        <article class="card walk"><span class="icon">🚶</span><p class="time">13:50頃 <span>→</span> 13:55頃</p><h3>鹿児島ラーメン店へ徒歩</h3><p class="mode">徒歩（候補により前後）</p></article>
+        <article class="card food"><span class="icon">🍜</span><p class="time">13:55頃 <span>→</span> 14:35頃</p><h3>鹿児島ラーメン</h3><p class="mode">食事（店舗未確定）</p><p class="note">14:05以降の着席・行列なら省略。</p></article>
+        <article class="card walk"><span class="icon">🚶</span><p class="time">14:35頃 <span>→</span> 14:40頃</p><h3>ラーメン店 → ホテル</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E3%82%BD%E3%83%A9%E3%83%AA%E3%82%A2%E8%A5%BF%E9%89%84%E3%83%9B%E3%83%86%E3%83%AB%E9%B9%BF%E5%85%90%E5%B3%B6" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+        <article class="card hotel"><span class="icon">🧳</span><p class="time">14:40頃 <span>→</span> 14:50頃</p><h3>ホテルで荷物回収</h3><p class="mode">ホテル</p></article>
+        <article class="card walk"><span class="icon">🚶</span><p class="time">14:50頃 <span>→</span> 14:55頃</p><h3>ホテル内・同建物の空港バスターミナルへ移動</h3><p class="mode">徒歩</p></article>
+        <article class="card transport"><span class="icon">🚌</span><p class="time">15:25 <span>→</span> 16:05</p><h3>鹿児島中央駅 → 鹿児島空港</h3><p class="mode">空港連絡バス</p><div class="actions"><a class="link" href="https://nangoku-kotsu.com/wp-content/uploads/pdf/airport_2026_0401.pdf" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
+      </div></section>
+      <section class="info return-block"><h2>帰路フライト</h2><article class="card transport"><span class="icon">✈️</span><p class="time">17:40 <span>→</span> 18:55</p><h3>鹿児島 → 伊丹</h3><p class="mode">航空便（予約便）</p></article></section>
+    </section>
+
+    <details><summary>ラーメン候補を見る</summary><div class="detail-body"><p class="small">鹿児島中央駅周辺に限定。店は当日選択。11/15（日）の個別営業・ラストオーダーは、臨時変更の可能性があるため11/13に公式案内・電話で最終確認。</p><div class="ramen-list">
+      <article class="ramen"><h3>ざぼんラーメン 鹿児島中央駅店</h3><p>鹿児島市中央町1-1 グルメ横丁。公式ページでは営業時間・L.O.の掲載を確認できないため要確認。</p><div class="actions"><a class="link" href="https://zabon-ramen.jp/shops/chuoh-station" target="_blank" rel="noopener noreferrer">公式</a><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E3%81%96%E3%81%BC%E3%82%93%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20%E9%B9%BF%E5%85%90%E5%B3%B6%E4%B8%AD%E5%A4%AE%E9%A7%85%E5%BA%97" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+      <article class="ramen"><h3>鹿児島ラーメン 豚とろ 鹿児島中央駅前店</h3><p>鹿児島市中央町3-3 神宮ビル1F。公式店舗案内の営業時間は11:00〜24:00。L.O.は掲載を確認できないため要確認。</p><div class="actions"><a class="link" href="https://www.tontoro-ramen.com/" target="_blank" rel="noopener noreferrer">公式</a><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E9%B9%BF%E5%85%90%E5%B3%B6%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20%E8%B1%9A%E3%81%A8%E3%82%8D%20%E9%B9%BF%E5%85%90%E5%B3%B6%E4%B8%AD%E5%A4%AE%E9%A7%85%E5%89%8D%E5%BA%97" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+      <article class="ramen"><h3>金斗雲RISING</h3><p>鹿児島市中央町2-8。日曜の通常昼営業は11:00〜15:00（火曜定休）。L.O.は公式掲載を確認できないため要確認。</p><div class="actions"><a class="link" href="https://kin-to-un.com/" target="_blank" rel="noopener noreferrer">公式</a><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E9%87%91%E6%96%97%E9%9B%B2RISING" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+      <article class="ramen"><h3>マルニ味噌らーめん アミュプラザ鹿児島店</h3><p>鹿児島市中央町1-1・アミュプラザ鹿児島 味の小径B1F。鹿児島の麦味噌を扱う味噌ラーメンで、一般的な鹿児島豚骨系とは異なる。店舗公式ページは個別の営業時間・L.O.未掲載のため要確認。</p><div class="actions"><a class="link" href="https://maruni-misoramen.com/" target="_blank" rel="noopener noreferrer">公式</a><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E3%83%9E%E3%83%AB%E3%83%8B%E5%91%B3%E5%99%8C%E3%82%89%E3%83%BC%E3%82%81%E3%82%93%20%E3%82%A2%E3%83%9F%E3%83%A5%E3%83%97%E3%83%A9%E3%82%B6%E9%B9%BF%E5%85%90%E5%B3%B6%E5%BA%97" target="_blank" rel="noopener noreferrer">地図</a></div></article>
+    </div></div></details>
+    <details><summary>主要リンク</summary><div class="detail-body"><div class="detail-list"><a class="link detail-link" href="https://www.hankyu.co.jp/" target="_blank" rel="noopener noreferrer">阪急</a><a class="link detail-link" href="https://www.osaka-monorail.co.jp/" target="_blank" rel="noopener noreferrer">大阪モノレール</a><a class="link detail-link" href="https://nangoku-kotsu.com/wp-content/uploads/pdf/airport_2026_0401.pdf" target="_blank" rel="noopener noreferrer">鹿児島空港連絡バス</a><a class="link detail-link" href="https://www.kotsu-city-kagoshima.jp/" target="_blank" rel="noopener noreferrer">鹿児島市電</a><a class="link detail-link" href="https://www.city.kagoshima.lg.jp/sakurajima-ferry/koro-jikoku/timetable.html" target="_blank" rel="noopener noreferrer">桜島フェリー</a><a class="link detail-link" href="https://www.kotsu-city-kagoshima.jp/wp/timesearch/" target="_blank" rel="noopener noreferrer">観光バス（シティビュー等）</a><a class="link detail-link" href="https://www.city.kagoshima.lg.jp/sakurajima-ferry/unchin/cute.html" target="_blank" rel="noopener noreferrer">CUTE</a></div></div></details>
+    <details><summary>CUTEについて</summary><div class="detail-body"><p>モバイルCUTE 2日券：大人2,100円／人。市電・市バス・カゴシマシティビュー・サクラジマアイランドビュー・桜島フェリーが対象です。</p><p>デジタル購入にはインターネット接続が必要。購入後の変更・払戻しはできません。空港連絡バス、阪急、大阪モノレール、航空便、徒歩は対象外です。</p></div></details>
+    <p class="bottom">PWA V1。初回のオンライン読み込み後は旅程をオフラインで閲覧できます。外部の地図・時刻表・公式サイトの閲覧には通信が必要です。</p>
+  </main>
+  <div class="update-banner" id="update-banner" role="status" aria-live="polite" hidden><span>新しいバージョンがあります</span><button type="button" id="apply-update">更新する</button></div>
+  <script>
+    const tabs=document.querySelectorAll('.tab'), days={14:document.getElementById('day14'),15:document.getElementById('day15')};
+    tabs.forEach(tab=>tab.addEventListener('click',()=>{const d=tab.dataset.day;tabs.forEach(t=>t.setAttribute('aria-selected',String(t===tab)));Object.entries(days).forEach(([key,p])=>p.hidden=key!==d);window.scrollTo({top:0,behavior:'smooth'});}));
+    const evening=document.querySelectorAll('[data-evening]'), variants={base:document.getElementById('evening-base'),hotel:document.getElementById('evening-hotel')};
+    evening.forEach(b=>b.addEventListener('click',()=>{const v=b.dataset.evening;evening.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));Object.entries(variants).forEach(([key,p])=>p.hidden=key!==v);}));
+    let exitChoice='',priorityChoice='';const status=document.getElementById('route-status');const map={'early-sengan':'A','late-sengan':'B','early-shiroyama':'C','late-shiroyama':'D'};
+    function showPlan(){document.querySelectorAll('[id^="plan-"]').forEach(p=>p.hidden=true);if(!exitChoice||!priorityChoice){status.textContent='2つ選ぶとおすすめ工程を表示します。';status.classList.remove('ready');return;}const id=map[exitChoice+'-'+priorityChoice];document.getElementById('plan-'+id).hidden=false;status.textContent='おすすめ工程を表示しました。';status.classList.add('ready');document.getElementById('plan-'+id).scrollIntoView({behavior:'smooth',block:'start'});}
+    document.querySelectorAll('[data-exit]').forEach(b=>b.addEventListener('click',()=>{exitChoice=b.dataset.exit;document.querySelectorAll('[data-exit]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));showPlan();}));
+    document.querySelectorAll('[data-priority]').forEach(b=>b.addEventListener('click',()=>{priorityChoice=b.dataset.priority;document.querySelectorAll('[data-priority]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));showPlan();}));
+  </script>
+  <script>
+    (() => {
+      const time = (card, start, end) => { card.querySelector('.time').innerHTML = `${start} <span>→</span> ${end}`; };
+      const card = (root, title) => [...root.querySelectorAll('.card')].find(x => x.querySelector('h3')?.textContent.trim() === title);
+      const makeWait = (start, end) => {
+        const item = document.createElement('article');
+        item.className = 'card wait';
+        item.innerHTML = `<span class="icon">⏳</span><p class="time">${start} <span>→</span> ${end}</p><h3>バス停・乗車準備</h3><p class="mode">待機</p>`;
+        return item;
+      };
+
+      document.querySelector('.subtitle').textContent = '当日用しおり H3｜時刻は交通のみ予定発→予定着';
+
+      const day14 = document.getElementById('day14');
+      time(card(day14, '駅前で休憩・市電待ち'), '09:50頃', '10:17');
+      time(card(day14, '鹿児島中央駅前 → 高見馬場'), '10:17', '10:22頃');
+      time(card(day14, '高見馬場 → 味のとんかつ丸一'), '10:22頃', '10:29頃');
+      time(card(day14, '丸一に並ぶ・開店待ち'), '10:29頃', '11:30');
+      const maruichi = card(day14, '味のとんかつ丸一で昼食');
+      maruichi.querySelector('.note')?.remove();
+      maruichi.insertAdjacentHTML('beforeend', '<div class="actions"><a class="link" href="https://www.kagoshima-yokanavi.jp/gourmet/10281" target="_blank" rel="noopener noreferrer">公式</a></div>');
+
+      const early = ['A', 'C'], late = ['B', 'D'];
+      for (const id of [...early, ...late]) {
+        const plan = document.getElementById('plan-' + id);
+        const items = [...plan.querySelectorAll('.timeline.in-plan > .card')];
+        const isEarly = early.includes(id);
+        time(items[0], isEarly ? '11:15頃' : '11:45頃', isEarly ? '11:30頃' : '12:00頃');
+        time(items[1], isEarly ? '11:30頃' : '12:00頃', isEarly ? '11:40頃' : '12:10頃');
+        items[2].before(makeWait(isEarly ? '11:40頃' : '12:10頃', isEarly ? '11:44' : '12:14'));
+      }
+
+      for (const id of ['A', 'B']) {
+        const plan = document.getElementById('plan-' + id);
+        const isA = id === 'A';
+        const visit = [...plan.querySelectorAll('.card')].find(x => x.querySelector('h3')?.textContent.includes('仙巌園観光'));
+        time(visit, isA ? '12:19' : '12:49', '13:25頃');
+
+        const toCentral = [...plan.querySelectorAll('.card')].find(x => x.querySelector('h3')?.textContent.includes('→ 鹿児島中央駅'));
+        toCentral.className = 'card walk';
+        toCentral.innerHTML = '<span class="icon">🚶</span><p class="time">13:25頃 <span>→</span> 13:35頃</p><h3>仙巌園 → JR仙巌園駅</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=JR%E4%BB%99%E5%B7%8C%E5%9C%92%E9%A7%85" target="_blank" rel="noopener noreferrer">地図</a></div>';
+        const jrWait = document.createElement('article');
+        jrWait.className = 'card wait';
+        jrWait.innerHTML = '<span class="icon">⏳</span><p class="time">13:35頃 <span>→</span> 13:40</p><h3>JR仙巌園駅で乗車準備</h3><p class="mode">待機</p>';
+        const jr = document.createElement('article');
+        jr.className = 'card transport';
+        jr.innerHTML = '<span class="icon">🚆</span><p class="time">13:40 <span>→</span> 13:48</p><h3>JR仙巌園駅 → JR鹿児島中央駅</h3><p class="mode">JR普通列車</p><p class="note">JRは別途運賃が必要。</p><div class="actions"><a class="link" href="https://www.jrkyushu-timetable.jp/sp/2610/0010/00106701.html?d=20261115&amp;t=2894901" target="_blank" rel="noopener noreferrer">時刻表</a></div>';
+        toCentral.after(jrWait, jr);
+
+        time(card(plan, '鹿児島ラーメン店へ徒歩'), '13:48', '13:55頃');
+        time(card(plan, '鹿児島ラーメン'), '13:55頃', '14:40頃');
+        time(card(plan, 'ラーメン店 → ホテル'), '14:40頃', '14:45頃');
+        time(card(plan, 'ホテルで荷物回収'), '14:45頃', '14:55頃');
+        time(card(plan, 'ホテル内・同建物の空港バスターミナルへ移動'), '14:55頃', '15:00頃');
+      }
+
+      const ramen = [...document.querySelectorAll('details')].find(x => x.querySelector('summary')?.textContent.trim() === 'ラーメン候補を見る');
+      const primary = [...document.querySelectorAll('details')].find(x => x.querySelector('summary')?.textContent.trim() === '主要リンク');
+      ramen.classList.add('utility-details');
+      primary.classList.add('utility-details');
+      const syncRamen = () => { ramen.hidden = document.getElementById('day15').hidden; };
+      document.querySelectorAll('.tab').forEach(x => x.addEventListener('click', syncRamen));
+      syncRamen();
+    })();
+  </script>
+  <script>
+    (() => {
+      // H3 の既存ハンドラと DOM 補正の後で、選択項目だけを端末内へ保存する。
+      document.querySelector('.subtitle').textContent = '当日用しおり PWA V1｜時刻は交通のみ予定発→予定着';
+      const storageKey = 'kagoshima-trip-pwa-v1-selection';
+      const allowed = {
+        day: ['14', '15'], evening: ['base', 'hotel'],
+        exit: ['early', 'late'], priority: ['sengan', 'shiroyama']
+      };
+      const valueOr = (key, candidate, fallback) => allowed[key].includes(candidate) ? candidate : fallback;
+      const pressed = selector => document.querySelector(selector + '[aria-pressed="true"]')?.dataset;
+      const saveChoices = () => {
+        try {
+          const choice = {
+            day: document.querySelector('.tab[aria-selected="true"]')?.dataset.day || '14',
+            evening: pressed('[data-evening]')?.evening || 'base',
+            exit: pressed('[data-exit]')?.exit || '',
+            priority: pressed('[data-priority]')?.priority || ''
+          };
+          localStorage.setItem(storageKey, JSON.stringify(choice));
+        } catch (_) { /* プライベートモード等では保存せず通常操作を続ける */ }
+      };
+      let stored = null;
+      try { stored = JSON.parse(localStorage.getItem(storageKey) || 'null'); } catch (_) { /* 保存領域が利用不可 */ }
+      if (stored && typeof stored === 'object') {
+        const day = valueOr('day', stored.day, '14');
+        const eveningChoice = valueOr('evening', stored.evening, 'base');
+        const savedExit = valueOr('exit', stored.exit, '');
+        const savedPriority = valueOr('priority', stored.priority, '');
+        document.querySelectorAll('.tab').forEach(b => b.setAttribute('aria-selected', String(b.dataset.day === day)));
+        days['14'].hidden = day !== '14';
+        days['15'].hidden = day !== '15';
+        document.querySelectorAll('[data-evening]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.evening === eveningChoice)));
+        Object.entries(variants).forEach(([key, panel]) => { panel.hidden = key !== eveningChoice; });
+        exitChoice = savedExit;
+        priorityChoice = savedPriority;
+        document.querySelectorAll('[data-exit]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.exit === savedExit)));
+        document.querySelectorAll('[data-priority]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.priority === savedPriority)));
+        document.querySelectorAll('[id^="plan-"]').forEach(p => { p.hidden = true; });
+        const planId = map[savedExit + '-' + savedPriority];
+        if (planId) {
+          document.getElementById('plan-' + planId).hidden = false;
+          status.textContent = 'おすすめ工程を表示しました。';
+          status.classList.add('ready');
+        }
+        const ramen = [...document.querySelectorAll('details')].find(x => x.querySelector('summary')?.textContent.trim() === 'ラーメン候補を見る');
+        ramen.hidden = days['15'].hidden;
+      }
+      document.querySelectorAll('.tab,[data-evening],[data-exit],[data-priority]').forEach(b => b.addEventListener('click', saveChoices));
+
+      // SW が利用できない環境でも、上の旅程と選択 UI はそのまま動く。
+      if (!('serviceWorker' in navigator)) return;
+      const banner = document.getElementById('update-banner');
+      const applyButton = document.getElementById('apply-update');
+      let waitingWorker = null;
+      let requestedUpdate = false;
+      const showWaiting = worker => {
+        if (!worker || !navigator.serviceWorker.controller) return;
+        waitingWorker = worker;
+        banner.hidden = false;
+      };
+      applyButton.addEventListener('click', () => {
+        if (!waitingWorker) return;
+        requestedUpdate = true;
+        applyButton.disabled = true;
+        waitingWorker.postMessage({type:'SKIP_WAITING'});
+      });
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        if (requestedUpdate) location.reload();
+      });
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js', {scope:'./'}).then(registration => {
+          showWaiting(registration.waiting);
+          registration.addEventListener('updatefound', () => {
+            const installing = registration.installing;
+            installing?.addEventListener('statechange', () => {
+              if (installing.state === 'installed') showWaiting(registration.waiting || installing);
+            });
+          });
+          document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) registration.update().catch(() => {});
+          });
+        }).catch(() => { /* SW 登録失敗時も通常のページとして閲覧可能 */ });
+      });
+    })();
+  </script>
+</body>
+</html>

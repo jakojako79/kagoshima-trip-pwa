@@ -1,0 +1,16 @@
+{
+  "id": "./",
+  "name": "鹿児島旅行しおり",
+  "short_name": "鹿児島旅行",
+  "description": "2026年11月14日・15日の鹿児島旅行しおり",
+  "lang": "ja",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f4ed",
+  "theme_color": "#123a5a",
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
