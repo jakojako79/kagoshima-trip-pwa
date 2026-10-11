@@ -9,12 +9,38 @@
   <meta name="apple-mobile-web-app-title" content="鹿児島旅行">
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
-  <title>鹿児島旅行 2026/11/14-15｜PWA V1</title>
+  <title>鹿児島旅行 2026/11/14-15｜PWA V1.1</title>
   <style>
     :root{--navy:#123a5a;--blue:#176ca3;--blue-pale:#eaf5fb;--green:#087d62;--green-pale:#e2f5ef;--warm:#a55c20;--warm-pale:#fff3e8;--sand:#f7f4ed;--ink:#17212b;--muted:#5b6670;--line:#d5dde3;--card:#fff;--shadow:0 2px 10px rgba(17,43,65,.09)}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;overflow-x:hidden;background:var(--sand);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;font-size:16px;line-height:1.55;-webkit-text-size-adjust:100%}button,a{font:inherit;-webkit-tap-highlight-color:transparent}button{cursor:pointer}[hidden]{display:none!important}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #ffba35;outline-offset:2px}.shell{width:min(100%,720px);margin:auto}.topbar{padding:max(16px,env(safe-area-inset-top)) 16px 14px;background:var(--navy);color:#fff}h1{margin:0;font-size:clamp(1.3rem,5vw,1.65rem);line-height:1.25}.subtitle{margin:4px 0 0;color:#d9ecf8;font-size:.92rem}.notice{margin:0;padding:10px 14px;border-bottom:1px solid #e7cf91;background:#fff4d9;color:#634400;font-size:.87rem}.day-nav{position:sticky;top:0;z-index:20;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 16px;background:rgba(247,244,237,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}.tab,.choice{min-height:46px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--navy);font-weight:800}.tab[aria-selected="true"]{border-color:var(--navy);background:var(--navy);color:#fff;box-shadow:0 2px 7px rgba(18,58,90,.25)}main{padding:14px 12px 36px}.day{display:grid;gap:16px}.info,.decision,details,.plan{border:1px solid var(--line);border-radius:14px;background:var(--card);box-shadow:var(--shadow)}.info{padding:14px}.info h2,.decision h2,.plan h2{margin:0 0 7px;color:var(--navy);font-size:1.08rem}.flight-grid{display:grid;gap:8px}.flight{padding:9px 10px;border-radius:10px;background:#f2f7fa;font-size:.92rem}.flight strong{display:inline-block;min-width:2.8em;color:var(--navy)}.section-title{margin:8px 4px 0;color:var(--navy);font-size:1.16rem;line-height:1.35}.lead{margin:-7px 4px 0;color:var(--muted);font-size:.9rem}.group{margin:12px 4px -4px;color:var(--navy);font-size:.88rem;font-weight:800;letter-spacing:.04em}.timeline{display:grid;gap:10px}.card{position:relative;min-height:86px;padding:12px 12px 12px 72px;border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow)}.card:before{position:absolute;top:18px;bottom:-15px;left:33px;width:2px;background:#c6d6e2;content:""}.timeline>.card:last-child:before{display:none}.icon{position:absolute;top:16px;left:16px;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--blue-pale);color:var(--navy);font-size:1.08rem}.walk .icon{background:#edf5ea;color:#377441}.food .icon{background:var(--warm-pale);color:var(--warm)}.visit .icon{background:#f1eefb;color:#61459b}.hotel .icon{background:#f0f2f4;color:#45545e}.wait .icon{background:#fff4d9;color:#79550a}.time{margin:0 0 3px;color:var(--navy);font-size:.88rem;font-weight:850;letter-spacing:.01em}.time span{color:#7890a1;padding:0 2px}.card h3{margin:0;color:#182b39;font-size:1rem;line-height:1.37}.mode,.note{margin:3px 0 0}.mode{color:var(--muted);font-size:.88rem}.note{color:#725610;font-size:.82rem}.badges,.actions{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}.badge{display:inline-flex;align-items:center;min-height:25px;padding:2px 9px;border-radius:999px;background:var(--green-pale);color:#075e4a;font-size:.77rem;font-weight:800;letter-spacing:.02em}.link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 13px;border:1px solid #a5c6da;border-radius:10px;background:#fff;color:#075e91;font-size:.88rem;font-weight:750;line-height:1.15;text-decoration:none}.link:hover{background:var(--blue-pale)}.decision{padding:15px}.decision p{margin:0;color:var(--muted);font-size:.9rem}.question{margin-top:14px}.question h3{margin:0 0 8px;font-size:1rem}.choices{display:grid;grid-template-columns:1fr 1fr;gap:8px}.choice{padding:8px;text-align:center}.choice small{display:block;color:var(--muted);font-size:.76rem;font-weight:500}.choice[aria-pressed="true"]{border-color:var(--navy);background:var(--blue-pale);box-shadow:inset 0 0 0 1px var(--navy)}.status{min-height:48px;margin-top:13px;padding:10px 12px;border-radius:10px;background:#f2f7fa;color:#385365;font-size:.9rem}.status.ready{background:var(--green-pale);color:#075e4a;font-weight:700}.plan{padding:15px;border-color:#8cc4b5}.kicker{margin:0 0 3px;color:var(--green);font-size:.83rem;font-weight:800}.variant{display:grid;gap:10px}.variant[hidden]{display:none!important}.in-plan .card{box-shadow:none}.in-plan .card:before{bottom:-15px}.return-block{display:grid;gap:10px}.warning{padding:10px 12px;border-radius:10px;background:#fff4d9;color:#70500a;font-size:.86rem}details{overflow:clip}summary{display:flex;align-items:center;min-height:52px;padding:12px 14px;color:var(--navy);font-weight:850;cursor:pointer;list-style:none}summary::-webkit-details-marker{display:none}summary:after{margin-left:auto;content:"＋";font-size:1.24rem}details[open] summary{border-bottom:1px solid var(--line)}details[open] summary:after{content:"−"}.detail-body{padding:0 14px 14px}.detail-list,.ramen-list{display:grid;gap:8px;margin-top:10px}.detail-link{width:100%;justify-content:flex-start}.detail-link:after{margin-left:auto;color:var(--muted);content:"↗"}.ramen{padding:10px;border-radius:11px;background:#f4f7f8}.ramen h3{margin:0;color:var(--navy);font-size:1rem}.ramen p{margin:3px 0 0;color:var(--muted);font-size:.84rem}.small{font-size:.84rem}.bottom{margin:2px 4px;color:var(--muted);font-size:.82rem;text-align:center}@media(min-width:600px){main{padding:20px 20px 40px}.day-nav{padding-inline:20px}.flight-grid{grid-template-columns:1fr 1fr}.card{padding-left:84px}.icon{left:21px}.choices{max-width:520px}}
     .utility-details{margin-block:14px}
     .update-banner{position:fixed;right:12px;bottom:max(12px,env(safe-area-inset-bottom));left:12px;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:12px;width:min(calc(100% - 24px),696px);margin-inline:auto;padding:10px 12px;border:1px solid #a5c6da;border-radius:12px;background:#fff;color:var(--navy);box-shadow:0 4px 18px rgba(17,43,65,.2);font-size:.9rem;font-weight:700}.update-banner button{min-height:44px;padding:8px 15px;border:0;border-radius:9px;background:var(--navy);color:#fff;font-weight:800;white-space:nowrap}
+    /* V1.1: only journey navigation and its safe-area clearance. */
+    body{padding-bottom:var(--journey-height,0px)}
+    .card[data-display-step-id]{scroll-margin-top:82px;scroll-margin-bottom:calc(var(--journey-height,0px) + 16px)}
+    .card.journey-current{outline:2px solid var(--navy);outline-offset:0}
+    .journey-card-tools{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-top:10px}
+    .journey-card-tools button{min-height:44px;padding:7px 10px;border:1px solid var(--line);border-radius:9px;background:#f4f7fa;color:var(--navy);font-size:.82rem;font-weight:750}
+    .journey-card-tools .journey-undo{color:#8b471b;background:#fff7ef;border-color:#d6bfae}
+    .journey-set[aria-pressed="true"]{background:var(--blue-pale);border-color:var(--navy)}
+    .journey-flags{display:flex;gap:6px}
+    .journey-current-flag,.journey-done-flag{padding:2px 7px;border-radius:6px;font-size:.77rem;font-weight:800}
+    .journey-current-flag{background:var(--navy);color:white}
+    .journey-done-flag{background:var(--green-pale);color:#075e4a}
+    .journey-nav{position:fixed;bottom:0;left:0;right:0;z-index:25;width:min(100%,720px);margin-inline:auto;padding:8px 12px max(8px,env(safe-area-inset-bottom));background:var(--sand);border-top:1px solid #a5c6da;box-shadow:0 -3px 12px rgba(17,43,65,.12)}
+    .journey-toggle{display:flex;align-items:center;gap:12px;width:100%;min-height:52px;padding:4px 2px;border:0;background:transparent;text-align:left;color:var(--navy)}
+    .journey-summary{flex:1;min-width:0;line-height:1.4}
+    .journey-summary span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.82rem}
+    #journey-current-name{font-size:.9rem;font-weight:850}
+    #journey-toggle-label{flex:none;padding:8px;font-size:.85rem;font-weight:750}
+    .journey-nav-actions{display:grid;grid-template-columns:1fr 1fr 1.4fr;gap:6px;margin-top:7px}
+    .journey-nav-actions button{min-height:44px;padding:7px 4px;border:1px solid #a5c6da;border-radius:9px;background:white;color:var(--navy);font-size:.85rem;font-weight:750}
+    #journey-finish{background:var(--navy);color:white;border-color:var(--navy)}
+    .journey-nav button:disabled{opacity:.5;cursor:default}
+    .journey-message{margin:6px 2px 0;font-size:.8rem;color:var(--muted)}
+    #journey-notice:empty{display:none}
+    #journey-save-warning{margin:6px 0 0;padding:6px 8px;border-radius:7px;background:#fff4d9;color:#70500a;font-size:.8rem}
+    .update-banner{bottom:calc(var(--journey-height,0px) + 12px)}
   </style>
 </head>
 <body>
@@ -174,7 +200,7 @@
     </div></div></details>
     <details><summary>主要リンク</summary><div class="detail-body"><div class="detail-list"><a class="link detail-link" href="https://www.hankyu.co.jp/" target="_blank" rel="noopener noreferrer">阪急</a><a class="link detail-link" href="https://www.osaka-monorail.co.jp/" target="_blank" rel="noopener noreferrer">大阪モノレール</a><a class="link detail-link" href="https://nangoku-kotsu.com/wp-content/uploads/pdf/airport_2026_0401.pdf" target="_blank" rel="noopener noreferrer">鹿児島空港連絡バス</a><a class="link detail-link" href="https://www.kotsu-city-kagoshima.jp/" target="_blank" rel="noopener noreferrer">鹿児島市電</a><a class="link detail-link" href="https://www.city.kagoshima.lg.jp/sakurajima-ferry/koro-jikoku/timetable.html" target="_blank" rel="noopener noreferrer">桜島フェリー</a><a class="link detail-link" href="https://www.kotsu-city-kagoshima.jp/wp/timesearch/" target="_blank" rel="noopener noreferrer">観光バス（シティビュー等）</a><a class="link detail-link" href="https://www.city.kagoshima.lg.jp/sakurajima-ferry/unchin/cute.html" target="_blank" rel="noopener noreferrer">CUTE</a></div></div></details>
     <details><summary>CUTEについて</summary><div class="detail-body"><p>モバイルCUTE 2日券：大人2,100円／人。市電・市バス・カゴシマシティビュー・サクラジマアイランドビュー・桜島フェリーが対象です。</p><p>デジタル購入にはインターネット接続が必要。購入後の変更・払戻しはできません。空港連絡バス、阪急、大阪モノレール、航空便、徒歩は対象外です。</p></div></details>
-    <p class="bottom">PWA V1。初回のオンライン読み込み後は旅程をオフラインで閲覧できます。外部の地図・時刻表・公式サイトの閲覧には通信が必要です。</p>
+    <p class="bottom">PWA V1.1。初回のオンライン読み込み後は旅程をオフラインで閲覧できます。外部の地図・時刻表・公式サイトの閲覧には通信が必要です。</p>
   </main>
   <div class="update-banner" id="update-banner" role="status" aria-live="polite" hidden><span>新しいバージョンがあります</span><button type="button" id="apply-update">更新する</button></div>
   <script>
@@ -255,7 +281,7 @@
   <script>
     (() => {
       // H3 の既存ハンドラと DOM 補正の後で、選択項目だけを端末内へ保存する。
-      document.querySelector('.subtitle').textContent = '当日用しおり PWA V1｜時刻は交通のみ予定発→予定着';
+      document.querySelector('.subtitle').textContent = '当日用しおり PWA V1.1｜時刻は交通のみ予定発→予定着';
       const storageKey = 'kagoshima-trip-pwa-v1-selection';
       const allowed = {
         day: ['14', '15'], evening: ['base', 'hotel'],
@@ -337,6 +363,280 @@
         }).catch(() => { /* SW 登録失敗時も通常のページとして閲覧可能 */ });
       });
     })();
+  </script>
+  <section class="journey-nav" id="journey-nav" aria-label="工程ナビ" hidden>
+    <button type="button" class="journey-toggle" id="journey-toggle" aria-expanded="false" aria-controls="journey-panel">
+      <span class="journey-summary" aria-live="polite"><span id="journey-current-name">現在工程を設定してください</span><span id="journey-next-name">各カードから設定できます</span></span><span id="journey-toggle-label">展開</span>
+    </button>
+    <div id="journey-panel" hidden>
+      <div class="journey-nav-actions"><button type="button" id="journey-current-jump" disabled>現在へ</button><button type="button" id="journey-next-jump" disabled>次へ</button><button type="button" id="journey-finish" disabled>完了して次へ</button></div>
+      <p class="journey-message" id="journey-count"></p><p class="journey-message" id="journey-notice" aria-live="polite"></p>
+    </div>
+    <p id="journey-save-warning" role="status" hidden></p>
+  </section>
+  <script id="journey-nav-code">
+(() => {
+  'use strict';
+  const NAV_KEY = 'kagoshima-trip-pwa-v1.1-nav';
+  // Stable semantic tokens, never DOM indexes. The arrays declare route order only.
+  const GROUPS = [
+    {key:'14-common', day:'14', prefix:'14.common', selector:'#day14 > .timeline', steps:[
+      ['tsukaguchi-juso','阪急塚口 → 十三'],
+      ['juso-hotarugaike','十三 → 蛍池'],
+      ['monorail-itami','蛍池 → 大阪空港'],
+      ['outbound-flight','伊丹 → 鹿児島'],
+      ['airport-bus-in','鹿児島空港 → 鹿児島中央駅'],
+      ['luggage-drop','ホテルで荷物預け'],
+      ['hotel-tram-in','ホテル → 鹿児島中央駅前電停'],
+      ['tram-wait-maruichi','駅前で休憩・市電待ち'],
+      ['tram-takamibaba','鹿児島中央駅前 → 高見馬場'],
+      ['walk-maruichi','高見馬場 → 味のとんかつ丸一'],
+      ['maruichi-queue','丸一に並ぶ・開店待ち'],
+      ['maruichi-lunch','味のとんかつ丸一で昼食'],
+      ['maruichi-tram','丸一 → 高見馬場電停'],
+      ['tram-wait-port','市電待ち'],
+      ['tram-suizokukuchi','高見馬場 → 水族館口'],
+      ['walk-ferry','水族館口 → 鹿児島港フェリー乗り場'],
+      ['ferry-ready','フェリー乗船準備'],
+      ['ferry-sakurajima','鹿児島港 → 桜島港'],
+      ['island-visitor','桜島港 → 桜島ビジターセンター'],
+      ['visitor-visit','桜島ビジターセンター観光'],
+      ['island-yunohira','桜島ビジターセンター → 湯之平展望所'],
+      ['yunohira-visit','湯之平展望所観光'],
+      ['island-port','湯之平展望所 → 桜島港'],
+      ['ferry-kagoshima','桜島港 → 鹿児島港'],
+      ['port-tram','鹿児島港 → 水族館口'],
+      ['tram-tenmonkan','水族館口 → 天文館通'],
+      ['walk-mujyaki','天文館通電停 → 天文館むじゃき'],
+      ['shirokuma','天文館むじゃきで白くま']
+    ]},
+    {key:'14-base',day:'14',prefix:'14.base',selector:'#evening-base .card',steps:[
+      ['walk-centerrace','天文館むじゃき → センテラス天文館'],
+      ['tenmonkan-stroll','センテラス天文館・天文館周辺散策'],
+      ['walk-adimori','センテラス天文館 → あぢもり'],
+      ['dinner','あぢもりで夕食','s14.adimori-dinner']
+    ]},
+    {key:'14-hotel',day:'14',prefix:'14.hotel',selector:'#evening-hotel .card',steps:[
+      ['walk-tram-out','天文館むじゃき → 天文館通電停'],
+      ['tram-hotel','天文館通 → 鹿児島中央駅前'],
+      ['walk-hotel','鹿児島中央駅前電停 → ホテル'],
+      ['rest','ホテル休憩'],
+      ['walk-tram-in','ホテル → 鹿児島中央駅前電停'],
+      ['tram-tenmonkan','鹿児島中央駅前 → 天文館通'],
+      ['walk-adimori','天文館通 → あぢもり'],
+      ['dinner','あぢもりで夕食','s14.adimori-dinner']
+    ]},
+    {key:'14-return',day:'14',prefix:'14.return',selector:'#day14 > .timeline[aria-label="11月14日夕食後"] .card',steps:[
+      ['walk-tram','あぢもり → 天文館通電停'],
+      ['tram-central','天文館通 → 鹿児島中央駅前'],
+      ['walk-hotel','鹿児島中央駅前電停 → ホテル'],
+      ['overnight','ホテル宿泊']
+    ]},
+    {key:'15-common',day:'15',prefix:'15.common',selector:'#day15 > .timeline .card',steps:[
+      ['checkout','ホテルでチェックアウト・荷物預け'],
+      ['walk-tram','ホテル → 鹿児島中央駅前電停'],
+      ['tram-wait','市電待ち'],
+      ['tram-tenmonkan','鹿児島中央駅前 → 天文館通'],
+      ['walk-sueyoshi','天文館通 → うなぎの末よし'],
+      ['sueyoshi-queue','末よしに並ぶ'],
+      ['sueyoshi-lunch','うなぎの末よしで昼食']
+    ]},
+    ...['A','B','C','D'].map(plan => ({key:'15-'+plan,day:'15',prefix:'15.'+plan,selector:'#plan-'+plan+' .card',steps:[
+      ['walk-saigo','末よし → 西郷隆盛銅像'],
+      ['saigo-visit','西郷隆盛銅像見学'],
+      ['saigo-bus-ready','バス停・乗車準備'],
+      ...(['A','B'].includes(plan) ? [
+        ['cityview-sengan','西郷銅像前 → 仙巌園（磯庭園）前'],
+        ['sengan-visit',plan==='A'?'仙巌園観光':'仙巌園観光（短縮）'],
+        ['walk-jr','仙巌園 → JR仙巌園駅'],
+        ['jr-ready','JR仙巌園駅で乗車準備'],
+        ['jr-central','JR仙巌園駅 → JR鹿児島中央駅']
+      ] : [
+        ['cityview-shiroyama','西郷銅像前 → 城山'],
+        ['shiroyama-visit','城山展望台観光'],
+        ['cityview-cave','城山 → 西郷洞窟前'],
+        ['cave-visit','西郷洞窟見学'],
+        ['cityview-central','西郷洞窟前 → 鹿児島中央駅']
+      ]),
+      ['walk-ramen','鹿児島ラーメン店へ徒歩'],
+      ['ramen','鹿児島ラーメン'],
+      ['walk-hotel','ラーメン店 → ホテル'],
+      ['luggage-pickup','ホテルで荷物回収'],
+      ['walk-terminal','ホテル内・同建物の空港バスターミナルへ移動'],
+      ['airport-bus','鹿児島中央駅 → 鹿児島空港','s15.airport-bus']
+    ]})),
+    {key:'15-flight',day:'15',prefix:'15.return',selector:'#day15 > .return-block .card',steps:[
+      ['flight','鹿児島 → 伊丹']
+    ]}
+  ];
+  const definitions = GROUPS.flatMap(group => group.steps.map(([token,title,shared],order) => ({
+    displayId:'v'+group.prefix+'.'+token, logicalId:shared || 's'+group.prefix+'.'+token,
+    day:group.day, group:group.key, order:order+1, title
+  })));
+  const logicalByDay = Object.fromEntries(['14','15'].map(day => [day,new Set(definitions.filter(x=>x.day===day).map(x=>x.logicalId))]));
+  function route(day, selection) {
+    const groups = day==='14' ? ['14-common',selection.evening==='hotel'?'14-hotel':'14-base','14-return']
+      : ['15-common',...(['A','B','C','D'].includes(selection.plan)?['15-'+selection.plan,'15-flight']:[])];
+    return groups.flatMap(group=>definitions.filter(x=>x.group===group));
+  }
+  function createModel(raw) {
+    let original = {}, canPersist = true, warning = '';
+    try {
+      if (raw !== null && raw !== undefined) {
+        original = JSON.parse(raw);
+        if (!original || original.schemaVersion !== 1 || !original.days || typeof original.days !== 'object') throw new Error('unknown schema');
+      }
+    } catch (_) { original={};canPersist=false;warning='保存済みの進捗を読み込めません。元データを上書きせず、この起動中だけ操作できます。'; }
+    const state = {...original,schemaVersion:1,days:{...original.days}};
+    for (const day of ['14','15']) {
+      const saved = original.days?.[day];
+      const obj = saved && typeof saved==='object' ? saved : {};
+      state.days[day] = {...obj,current:typeof obj.current==='string'?obj.current:null,
+        completed:[...new Set(Array.isArray(obj.completed)?obj.completed.filter(x=>typeof x==='string'):[])],ended:obj.ended===true};
+    }
+    const next = (day,selection) => {
+      const items=route(day,selection), i=items.findIndex(x=>x.logicalId===state.days[day].current);
+      return i>=0?items[i+1] || null:null;
+    };
+    return {
+      state,canPersist,warning,route,next,
+      reconcile(day,selection) {
+        const current=state.days[day].current;
+        if(current && !route(day,selection).some(x=>x.logicalId===current)) {
+          state.days[day].current=null;state.days[day].ended=false;return true;
+        }
+        return false;
+      },
+      setCurrent(day,id,selection) {
+        if(!route(day,selection).some(x=>x.logicalId===id)) return false;
+        state.days[day].current=id;state.days[day].ended=false;return true;
+      },
+      finish(day,selection) {
+        const current=state.days[day].current;
+        if(!route(day,selection).some(x=>x.logicalId===current)) return {changed:false};
+        if(!state.days[day].completed.includes(current)) state.days[day].completed.push(current);
+        const following=next(day,selection);
+        state.days[day].current=following?.logicalId || null;
+        const needsCourse=day==='15' && !['A','B','C','D'].includes(selection.plan);
+        state.days[day].ended=!following && !needsCourse;
+        return {changed:true,needsCourse:!following && needsCourse};
+      },
+      cancel(day,id) {
+        if(!logicalByDay[day].has(id)) return false;
+        const old=state.days[day].completed.length;
+        state.days[day].completed=state.days[day].completed.filter(x=>x!==id);
+        return old!==state.days[day].completed.length;
+      },
+      serialize() { return JSON.stringify(state); }
+    };
+  }
+  // The same pure model is loaded by a small Node test without a browser.
+  if (typeof document === 'undefined') { globalThis.journeyNavTest={NAV_KEY,GROUPS,definitions,route,createModel};return; }
+  const nav=document.getElementById('journey-nav');
+  const notice=document.getElementById('journey-notice');
+  const saveWarning=document.getElementById('journey-save-warning');
+  try {
+    const cards=new Map();
+    for (const group of GROUPS) {
+      let elements=[...document.querySelectorAll(group.selector)];
+      if(group.key==='14-common') elements=elements.filter(x=>x.getAttribute('aria-label')!=='11月14日夕食後').flatMap(x=>[...x.querySelectorAll('.card')]);
+      const entries=definitions.filter(x=>x.group===group.key);
+      if(elements.length!==entries.length) throw new Error('card count: '+group.key);
+      for(const entry of entries) {
+        const matches=elements.filter(x=>x.querySelector('h3')?.textContent.trim()===entry.title);
+        if(matches.length!==1) throw new Error('card mapping: '+entry.displayId);
+        const card=matches[0];
+        card.dataset.displayStepId=entry.displayId;card.dataset.logicalStepId=entry.logicalId;
+        card.id=entry.displayId;card.tabIndex=-1;
+        cards.set(entry.displayId,card);
+      }
+    }
+    if(cards.size!==document.querySelectorAll('article.card').length) throw new Error('unmapped card');
+    for (const entry of definitions) {
+        const card=cards.get(entry.displayId);
+        const controls=document.createElement('div');controls.className='journey-card-tools';
+        const flags=document.createElement('span');flags.className='journey-flags';
+        const currentFlag=document.createElement('span');currentFlag.className='journey-current-flag';currentFlag.textContent='現在';currentFlag.hidden=true;
+        const doneFlag=document.createElement('span');doneFlag.className='journey-done-flag';doneFlag.textContent='完了';doneFlag.hidden=true;
+        flags.append(currentFlag,doneFlag);
+        const set=document.createElement('button');set.type='button';set.textContent='ここを現在に設定';set.className='journey-set';
+        set.setAttribute('aria-label',entry.title+'を現在に設定');
+        const undo=document.createElement('button');undo.type='button';undo.className='journey-undo';undo.textContent='完了を取り消す';undo.hidden=true;
+        undo.setAttribute('aria-label',entry.title+'の完了を取り消す');
+        controls.append(flags,set,undo);card.append(controls);
+        set.addEventListener('click',()=>{if(model.setCurrent(entry.day,entry.logicalId,selection())){notice.textContent='';save();render();}});
+        undo.addEventListener('click',()=>{if(model.cancel(entry.day,entry.logicalId)){save();render();}});
+    }
+    let raw=null, readFailed=false;
+    try { raw=localStorage.getItem(NAV_KEY); } catch (_) { readFailed=true; }
+    const model=createModel(raw);
+    const selection=() => ({evening:document.querySelector('[data-evening][aria-pressed="true"]')?.dataset.evening || 'base',
+      plan:[...document.querySelectorAll('[id^="plan-"]')].find(x=>!x.hidden)?.id.slice(5) || null});
+    const activeDay=()=>document.querySelector('.tab[aria-selected="true"]')?.dataset.day || '14';
+    function warn(text) { saveWarning.textContent=text;saveWarning.hidden=!text; }
+    function save() {
+      if(!model.canPersist){warn(model.warning);return;}
+      try{localStorage.setItem(NAV_KEY,model.serialize());warn('');}
+      catch(_){warn('進捗を端末に保存できませんでした。画面上の操作は反映されていますが、再起動で失われる可能性があります。');}
+    }
+    function reconcile() {
+      let changed=false;
+      for(const day of ['14','15']) changed=model.reconcile(day,selection()) || changed;
+      if(changed){notice.textContent='コース変更または工程変更により現在工程を解除しました。カードから手動で再設定してください。';save();}
+    }
+    function render() {
+      const day=activeDay(), selected=selection(), items=model.route(day,selected), data=model.state.days[day];
+      for(const entry of definitions) {
+        const card=cards.get(entry.displayId), ds=model.state.days[entry.day];
+        const done=ds.completed.includes(entry.logicalId), current=ds.current===entry.logicalId;
+        card.classList.toggle('journey-current',current);card.classList.toggle('journey-done',done);
+        if(current)card.setAttribute('aria-current','step');else card.removeAttribute('aria-current');
+        card.querySelector('.journey-current-flag').hidden=!current;card.querySelector('.journey-done-flag').hidden=!done;
+        card.querySelector('.journey-undo').hidden=!done;card.querySelector('.journey-set').setAttribute('aria-pressed',String(current));
+      }
+      const current=items.find(x=>x.logicalId===data.current), next=model.next(day,selected);
+      document.getElementById('journey-current-name').textContent=current?'現在：'+current.title:data.ended?'この日は終了しました':'現在工程を設定してください';
+      document.getElementById('journey-next-name').textContent=next?'次：'+next.title+'｜'+cards.get(next.displayId).querySelector('.time').textContent.trim():
+        day==='15'&&!selected.plan?'末よし後はコースを選択してください':current?'次の工程はありません':data.ended?'別の工程へ戻る場合はカードから設定':'各カードの「ここを現在に設定」を押してください';
+      document.getElementById('journey-current-jump').disabled=!current;
+      document.getElementById('journey-next-jump').disabled=!next;
+      document.getElementById('journey-finish').disabled=!current;
+      document.getElementById('journey-count').textContent='11/'+day+'・選択中の工程：完了 '+items.filter(x=>data.completed.includes(x.logicalId)).length+' / '+items.length;
+    }
+    function jump(next=false) {
+      const day=activeDay(), items=model.route(day,selection());
+      const entry=next?model.next(day,selection()):items.find(x=>x.logicalId===model.state.days[day].current);
+      if(!entry)return;
+      const card=cards.get(entry.displayId);
+      card.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+      card.focus({preventScroll:true});
+    }
+    document.getElementById('journey-current-jump').addEventListener('click',()=>jump());
+    document.getElementById('journey-next-jump').addEventListener('click',()=>jump(true));
+    document.getElementById('journey-finish').addEventListener('click',()=>{
+      const result=model.finish(activeDay(),selection());
+      if(!result.changed)return;
+      notice.textContent=result.needsCourse?'共通工程が完了しました。末よし退店時刻と優先コースを選び、次のカードを現在に設定してください。':'';
+      save();render();
+    });
+    const toggle=document.getElementById('journey-toggle'), panel=document.getElementById('journey-panel');
+    toggle.addEventListener('click',()=>{panel.hidden=!panel.hidden;toggle.setAttribute('aria-expanded',String(!panel.hidden));document.getElementById('journey-toggle-label').textContent=panel.hidden?'展開':'閉じる';measure();});
+    document.querySelectorAll('.tab,[data-evening],[data-exit],[data-priority]').forEach(b=>b.addEventListener('click',()=>{reconcile();render();}));
+    function measure(){document.documentElement.style.setProperty('--journey-height',nav.getBoundingClientRect().height+'px');}
+    if('ResizeObserver' in window)new ResizeObserver(measure).observe(nav);else window.addEventListener('resize',measure);
+    if(readFailed)warn('保存領域を利用できません。進捗はこの起動中だけ保持される可能性があります。');
+    if(!model.canPersist)warn(model.warning);
+    nav.hidden=false;reconcile();render();measure();
+  } catch(error) {
+    document.querySelectorAll('.journey-card-tools').forEach(x=>x.remove());
+    nav.hidden=false;document.getElementById('journey-current-name').textContent='工程ナビを初期化できませんでした';
+    document.getElementById('journey-next-name').textContent='旅程と既存の切替・リンクは引き続き利用できます。';
+    notice.textContent='工程カードとID対応を確認してください。';
+    document.getElementById('journey-toggle').disabled=true;
+    document.documentElement.style.setProperty('--journey-height',nav.getBoundingClientRect().height+'px');
+    console.error('Journey navigation:',error);
+  }
+})();
   </script>
 </body>
 </html>

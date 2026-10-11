@@ -1,5 +1,5 @@
 // リリース時に本体ファイルを変更した場合は、この識別子も更新する。
-const CACHE_NAME = 'kagoshima-trip-pwa-v1-20261012-2';
+const CACHE_NAME = 'kagoshima-trip-pwa-v1.1-20261012-1';
 const CACHE_PREFIX = 'kagoshima-trip-pwa-';
 const APP_SHELL = [
   './', './index.html', './manifest.webmanifest',
