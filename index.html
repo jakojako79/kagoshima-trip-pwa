@@ -866,7 +866,19 @@
       restoreJSON(text,approved=false){const valid=validate(JSON.parse(text));if(!approved)return {needsConfirmation:true,data:valid};this.commit(valid,true);return {restored:true};}
     };
   }
-  if(typeof document==='undefined'){globalThis.costsTest={COST_KEY,FIXED,MAX_CUSTOM,MAX_NAME,initial,parseAmount,validate,totals,createModel,createStore};return;}
+  // Display-only recovery: never dispatch input events or write storage.
+  const composingAmounts=new WeakSet();
+  function syncAmountFields(container,data,activeElement) {
+    const items=new Map([...data.fixed,...data.custom].map(item=>[item.id,item]));
+    for(const input of container.querySelectorAll('input[data-cost-field]')) {
+      const item=items.get(input.dataset.costId),field=input.dataset.costField;
+      if(!item || !['planned','actual'].includes(field) || input===activeElement ||
+         composingAmounts.has(input) || input.getAttribute('aria-invalid')==='true')continue;
+      const value=item[field]===null?'':String(item[field]);
+      if(input.value!==value)input.value=value;
+    }
+  }
+  if(typeof document==='undefined'){globalThis.costsTest={COST_KEY,FIXED,MAX_CUSTOM,MAX_NAME,initial,parseAmount,validate,totals,createModel,createStore,syncAmountFields,composingAmounts};return;}
   const screen=document.getElementById('cost-screen'),trip=document.getElementById('trip-main'),tab=document.getElementById('tab-cost');
   const statusNode=document.getElementById('cost-status');
   let store;
@@ -881,6 +893,16 @@
       document.getElementById('cost-'+field+'-count').textContent=t[field].count+' / '+t.totalItems+'費目'+(t[field].count>0 && t[field].count<t.totalItems?'・一部未入力':'');
     }
   }
+  let exportRecoveryPending=false;
+  function syncAmounts() {
+    if(!screen.hidden && !store.blocked)syncAmountFields(screen,store.data,document.activeElement);
+  }
+  function queueAmountSync(){requestAnimationFrame(syncAmounts);}
+  function recoverExportDisplay() {
+    if(exportRecoveryPending && document.visibilityState==='visible')requestAnimationFrame(()=>{syncAmounts();exportRecoveryPending=false;});
+  }
+  document.addEventListener('visibilitychange',recoverExportDisplay);
+  window.addEventListener('pageshow',recoverExportDisplay);
   function makeItem(data,definition=null) {
     const custom=!definition,article=document.createElement('article');article.className='cost-item';article.dataset.costId=data.id;
     const title=document.createElement('h3');title.textContent=custom?data.name:definition.name;article.append(title);
@@ -894,6 +916,9 @@
     for(const [field,labelText]of [['planned','予定額（円）'],['actual','実績額（円）']]) {
       const label=document.createElement('label');label.textContent=labelText;
       const input=document.createElement('input');input.type='text';input.inputMode='numeric';input.autocomplete='off';input.maxLength=16;input.value=data[field]===null?'':String(data[field]);input.disabled=store.blocked;
+      input.dataset.costId=data.id;input.dataset.costField=field;
+      input.addEventListener('compositionstart',()=>composingAmounts.add(input));
+      input.addEventListener('compositionend',()=>composingAmounts.delete(input));
       input.setAttribute('aria-label',(custom?data.name:definition.name)+' '+labelText);label.append(input);fields.append(label);
       input.addEventListener('input',()=>{
         try{parseAmount(input.value);}catch(e){input.setAttribute('aria-invalid','true');note.textContent=errorMessage(e);note.hidden=false;return;}
@@ -926,6 +951,7 @@
     // Display-only tab: no progress/selection storage writes and no resume calls.
     document.querySelectorAll('.tab').forEach(b=>b.setAttribute('aria-selected','false'));
     tab.setAttribute('aria-selected','true');trip.hidden=true;screen.hidden=false;document.getElementById('journey-feedback').hidden=true;
+    syncAmounts();
     window.scrollTo({top:0,behavior:'auto'});
   });
   document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{tab.setAttribute('aria-selected','false');screen.hidden=true;trip.hidden=false;}));
@@ -935,7 +961,7 @@
     const s=[...bytes].map(x=>x.toString(16).padStart(2,'0')).join('');return 'cost.custom.'+s.slice(0,8)+'-'+s.slice(8,12)+'-'+s.slice(12,16)+'-'+s.slice(16,20)+'-'+s.slice(20);
   }
   document.getElementById('cost-add-form').addEventListener('submit',event=>{event.preventDefault();const name=document.getElementById('cost-add-name');try{store.change(m=>m.add(customID(),name.value));name.value='';render();notify('費目を追加しました。');}catch(e){notify(errorMessage(e),true);}});
-  document.getElementById('cost-export').addEventListener('click',()=>{try{const blob=new Blob([store.exportJSON()],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='kagoshima-costs-'+new Date().toISOString().slice(0,10)+'.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);notify('費用バックアップを作成しました。');}catch(e){notify(errorMessage(e),true);}});
+  document.getElementById('cost-export').addEventListener('click',()=>{try{const blob=new Blob([store.exportJSON()],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='kagoshima-costs-'+new Date().toISOString().slice(0,10)+'.json';document.body.append(a);exportRecoveryPending=true;a.click();a.remove();queueAmountSync();setTimeout(()=>{URL.revokeObjectURL(url);queueAmountSync();},1000);notify('費用バックアップを作成しました。');}catch(e){notify(errorMessage(e),true);}});
   document.getElementById('cost-import').addEventListener('change',async event=>{
     const input=event.target,file=input.files?.[0];if(!file)return;
     try{if(file.size>MAX_FILE_BYTES)throw new Error('JSONファイルが大きすぎます（256KBまで）。');const text=await file.text();const validated=store.restoreJSON(text);
