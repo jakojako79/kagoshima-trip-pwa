@@ -9,44 +9,32 @@
   <meta name="apple-mobile-web-app-title" content="鹿児島旅行">
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
-  <title>鹿児島旅行 2026/11/14-15｜PWA V1.1</title>
+  <title>鹿児島旅行 2026/11/14-15｜PWA V1.1.1</title>
   <style>
     :root{--navy:#123a5a;--blue:#176ca3;--blue-pale:#eaf5fb;--green:#087d62;--green-pale:#e2f5ef;--warm:#a55c20;--warm-pale:#fff3e8;--sand:#f7f4ed;--ink:#17212b;--muted:#5b6670;--line:#d5dde3;--card:#fff;--shadow:0 2px 10px rgba(17,43,65,.09)}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;overflow-x:hidden;background:var(--sand);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;font-size:16px;line-height:1.55;-webkit-text-size-adjust:100%}button,a{font:inherit;-webkit-tap-highlight-color:transparent}button{cursor:pointer}[hidden]{display:none!important}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #ffba35;outline-offset:2px}.shell{width:min(100%,720px);margin:auto}.topbar{padding:max(16px,env(safe-area-inset-top)) 16px 14px;background:var(--navy);color:#fff}h1{margin:0;font-size:clamp(1.3rem,5vw,1.65rem);line-height:1.25}.subtitle{margin:4px 0 0;color:#d9ecf8;font-size:.92rem}.notice{margin:0;padding:10px 14px;border-bottom:1px solid #e7cf91;background:#fff4d9;color:#634400;font-size:.87rem}.day-nav{position:sticky;top:0;z-index:20;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 16px;background:rgba(247,244,237,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}.tab,.choice{min-height:46px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--navy);font-weight:800}.tab[aria-selected="true"]{border-color:var(--navy);background:var(--navy);color:#fff;box-shadow:0 2px 7px rgba(18,58,90,.25)}main{padding:14px 12px 36px}.day{display:grid;gap:16px}.info,.decision,details,.plan{border:1px solid var(--line);border-radius:14px;background:var(--card);box-shadow:var(--shadow)}.info{padding:14px}.info h2,.decision h2,.plan h2{margin:0 0 7px;color:var(--navy);font-size:1.08rem}.flight-grid{display:grid;gap:8px}.flight{padding:9px 10px;border-radius:10px;background:#f2f7fa;font-size:.92rem}.flight strong{display:inline-block;min-width:2.8em;color:var(--navy)}.section-title{margin:8px 4px 0;color:var(--navy);font-size:1.16rem;line-height:1.35}.lead{margin:-7px 4px 0;color:var(--muted);font-size:.9rem}.group{margin:12px 4px -4px;color:var(--navy);font-size:.88rem;font-weight:800;letter-spacing:.04em}.timeline{display:grid;gap:10px}.card{position:relative;min-height:86px;padding:12px 12px 12px 72px;border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow)}.card:before{position:absolute;top:18px;bottom:-15px;left:33px;width:2px;background:#c6d6e2;content:""}.timeline>.card:last-child:before{display:none}.icon{position:absolute;top:16px;left:16px;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--blue-pale);color:var(--navy);font-size:1.08rem}.walk .icon{background:#edf5ea;color:#377441}.food .icon{background:var(--warm-pale);color:var(--warm)}.visit .icon{background:#f1eefb;color:#61459b}.hotel .icon{background:#f0f2f4;color:#45545e}.wait .icon{background:#fff4d9;color:#79550a}.time{margin:0 0 3px;color:var(--navy);font-size:.88rem;font-weight:850;letter-spacing:.01em}.time span{color:#7890a1;padding:0 2px}.card h3{margin:0;color:#182b39;font-size:1rem;line-height:1.37}.mode,.note{margin:3px 0 0}.mode{color:var(--muted);font-size:.88rem}.note{color:#725610;font-size:.82rem}.badges,.actions{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}.badge{display:inline-flex;align-items:center;min-height:25px;padding:2px 9px;border-radius:999px;background:var(--green-pale);color:#075e4a;font-size:.77rem;font-weight:800;letter-spacing:.02em}.link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 13px;border:1px solid #a5c6da;border-radius:10px;background:#fff;color:#075e91;font-size:.88rem;font-weight:750;line-height:1.15;text-decoration:none}.link:hover{background:var(--blue-pale)}.decision{padding:15px}.decision p{margin:0;color:var(--muted);font-size:.9rem}.question{margin-top:14px}.question h3{margin:0 0 8px;font-size:1rem}.choices{display:grid;grid-template-columns:1fr 1fr;gap:8px}.choice{padding:8px;text-align:center}.choice small{display:block;color:var(--muted);font-size:.76rem;font-weight:500}.choice[aria-pressed="true"]{border-color:var(--navy);background:var(--blue-pale);box-shadow:inset 0 0 0 1px var(--navy)}.status{min-height:48px;margin-top:13px;padding:10px 12px;border-radius:10px;background:#f2f7fa;color:#385365;font-size:.9rem}.status.ready{background:var(--green-pale);color:#075e4a;font-weight:700}.plan{padding:15px;border-color:#8cc4b5}.kicker{margin:0 0 3px;color:var(--green);font-size:.83rem;font-weight:800}.variant{display:grid;gap:10px}.variant[hidden]{display:none!important}.in-plan .card{box-shadow:none}.in-plan .card:before{bottom:-15px}.return-block{display:grid;gap:10px}.warning{padding:10px 12px;border-radius:10px;background:#fff4d9;color:#70500a;font-size:.86rem}details{overflow:clip}summary{display:flex;align-items:center;min-height:52px;padding:12px 14px;color:var(--navy);font-weight:850;cursor:pointer;list-style:none}summary::-webkit-details-marker{display:none}summary:after{margin-left:auto;content:"＋";font-size:1.24rem}details[open] summary{border-bottom:1px solid var(--line)}details[open] summary:after{content:"−"}.detail-body{padding:0 14px 14px}.detail-list,.ramen-list{display:grid;gap:8px;margin-top:10px}.detail-link{width:100%;justify-content:flex-start}.detail-link:after{margin-left:auto;color:var(--muted);content:"↗"}.ramen{padding:10px;border-radius:11px;background:#f4f7f8}.ramen h3{margin:0;color:var(--navy);font-size:1rem}.ramen p{margin:3px 0 0;color:var(--muted);font-size:.84rem}.small{font-size:.84rem}.bottom{margin:2px 4px;color:var(--muted);font-size:.82rem;text-align:center}@media(min-width:600px){main{padding:20px 20px 40px}.day-nav{padding-inline:20px}.flight-grid{grid-template-columns:1fr 1fr}.card{padding-left:84px}.icon{left:21px}.choices{max-width:520px}}
     .utility-details{margin-block:14px}
     .update-banner{position:fixed;right:12px;bottom:max(12px,env(safe-area-inset-bottom));left:12px;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:12px;width:min(calc(100% - 24px),696px);margin-inline:auto;padding:10px 12px;border:1px solid #a5c6da;border-radius:12px;background:#fff;color:var(--navy);box-shadow:0 4px 18px rgba(17,43,65,.2);font-size:.9rem;font-weight:700}.update-banner button{min-height:44px;padding:8px 15px;border:0;border-radius:9px;background:var(--navy);color:#fff;font-weight:800;white-space:nowrap}
-    /* V1.1: only journey navigation and its safe-area clearance. */
-    body{padding-bottom:var(--journey-height,0px)}
-    .card[data-display-step-id]{scroll-margin-top:82px;scroll-margin-bottom:calc(var(--journey-height,0px) + 16px)}
-    .card.journey-current{outline:2px solid var(--navy);outline-offset:0}
-    .journey-card-tools{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-top:10px}
-    .journey-card-tools button{min-height:44px;padding:7px 10px;border:1px solid var(--line);border-radius:9px;background:#f4f7fa;color:var(--navy);font-size:.82rem;font-weight:750}
-    .journey-card-tools .journey-undo{color:#8b471b;background:#fff7ef;border-color:#d6bfae}
-    .journey-set[aria-pressed="true"]{background:var(--blue-pale);border-color:var(--navy)}
-    .journey-flags{display:flex;gap:6px}
-    .journey-current-flag,.journey-done-flag{padding:2px 7px;border-radius:6px;font-size:.77rem;font-weight:800}
-    .journey-current-flag{background:var(--navy);color:white}
-    .journey-done-flag{background:var(--green-pale);color:#075e4a}
-    .journey-nav{position:fixed;bottom:0;left:0;right:0;z-index:25;width:min(100%,720px);margin-inline:auto;padding:8px 12px max(8px,env(safe-area-inset-bottom));background:var(--sand);border-top:1px solid #a5c6da;box-shadow:0 -3px 12px rgba(17,43,65,.12)}
-    .journey-toggle{display:flex;align-items:center;gap:12px;width:100%;min-height:52px;padding:4px 2px;border:0;background:transparent;text-align:left;color:var(--navy)}
-    .journey-summary{flex:1;min-width:0;line-height:1.4}
-    .journey-summary span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.82rem}
-    #journey-current-name{font-size:.9rem;font-weight:850}
-    #journey-toggle-label{flex:none;padding:8px;font-size:.85rem;font-weight:750}
-    .journey-nav-actions{display:grid;grid-template-columns:1fr 1fr 1.4fr;gap:6px;margin-top:7px}
-    .journey-nav-actions button{min-height:44px;padding:7px 4px;border:1px solid #a5c6da;border-radius:9px;background:white;color:var(--navy);font-size:.85rem;font-weight:750}
-    #journey-finish{background:var(--navy);color:white;border-color:var(--navy)}
-    .journey-nav button:disabled{opacity:.5;cursor:default}
-    .journey-message{margin:6px 2px 0;font-size:.8rem;color:var(--muted)}
-    #journey-notice:empty{display:none}
-    #journey-save-warning{margin:6px 0 0;padding:6px 8px;border-radius:7px;background:#fff4d9;color:#70500a;font-size:.8rem}
-    .update-banner{bottom:calc(var(--journey-height,0px) + 12px)}
+    /* V1.1.1: reuse cards and stable IDs; group bodies only after ID binding. */
+    .card[data-display-step-id]{scroll-margin-top:82px}
+    .journey-card-tools{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .journey-card-tools button{min-height:44px;min-width:64px;padding:7px 14px;border:1px solid #a5c6da;border-radius:9px;background:#f4f7fa;color:var(--navy);font-size:.85rem;font-weight:750}
+    .journey-toggle-done[aria-pressed="true"]{background:var(--green-pale);border-color:#8cc4b5;color:#075e4a}
+    .journey-done-flag{padding:2px 7px;border-radius:6px;background:var(--green-pale);color:#075e4a;font-size:.8rem;font-weight:800}
+    .journey-section{box-shadow:none}
+    .journey-section-name{flex:1;min-width:0}
+    .journey-section-count{margin-left:10px;margin-right:10px;color:var(--muted);font-size:.8rem;font-weight:600;white-space:nowrap}
+    .journey-group-body{padding:12px}
+    .journey-feedback,.journey-operation-warning{padding:8px 12px;border-radius:9px;background:#fff4d9;color:#70500a;font-size:.85rem}
+    .journey-feedback{margin:10px auto}
+    .journey-operation-warning{margin:6px 0 0}
   </style>
 </head>
 <body>
   <header class="topbar"><div class="shell"><h1>鹿児島旅行 2026/11/14-15</h1><p class="subtitle">当日用しおり H2｜時刻は交通のみ予定発→予定着</p></div></header>
   <p class="notice shell">11/13と当日朝に、運休・臨時ダイヤ・飲食店営業を再確認。空港連絡バスは満席時に次便案内となる場合があります。</p>
   <nav class="day-nav shell" aria-label="日程切替"><button class="tab" type="button" role="tab" id="tab14" aria-controls="day14" aria-selected="true" data-day="14">11/14（土）</button><button class="tab" type="button" role="tab" id="tab15" aria-controls="day15" aria-selected="false" data-day="15">11/15（日）</button></nav>
+  <p class="journey-feedback shell" id="journey-feedback" role="status" hidden></p>
   <main class="shell">
     <section class="day" id="day14" role="tabpanel" aria-labelledby="tab14">
       <section class="info"><h2>基本情報</h2><div class="flight-grid"><div class="flight"><strong>往路</strong>11/14 07:05 伊丹 → 08:30 鹿児島</div><div class="flight"><strong>復路</strong>11/15 17:40 鹿児島 → 18:55 伊丹</div><div class="flight"><strong>宿泊</strong><a href="https://solaria-kagoshima.nnr-h.com/" target="_blank" rel="noopener noreferrer">ソラリア西鉄ホテル鹿児島（公式）</a></div><div class="flight"><strong>CUTE</strong>2日券・大人2,100円／人</div></div></section>
@@ -200,7 +188,7 @@
     </div></div></details>
     <details><summary>主要リンク</summary><div class="detail-body"><div class="detail-list"><a class="link detail-link" href="https://www.hankyu.co.jp/" target="_blank" rel="noopener noreferrer">阪急</a><a class="link detail-link" href="https://www.osaka-monorail.co.jp/" target="_blank" rel="noopener noreferrer">大阪モノレール</a><a class="link detail-link" href="https://nangoku-kotsu.com/wp-content/uploads/pdf/airport_2026_0401.pdf" target="_blank" rel="noopener noreferrer">鹿児島空港連絡バス</a><a class="link detail-link" href="https://www.kotsu-city-kagoshima.jp/" target="_blank" rel="noopener noreferrer">鹿児島市電</a><a class="link detail-link" href="https://www.city.kagoshima.lg.jp/sakurajima-ferry/koro-jikoku/timetable.html" target="_blank" rel="noopener noreferrer">桜島フェリー</a><a class="link detail-link" href="https://www.kotsu-city-kagoshima.jp/wp/timesearch/" target="_blank" rel="noopener noreferrer">観光バス（シティビュー等）</a><a class="link detail-link" href="https://www.city.kagoshima.lg.jp/sakurajima-ferry/unchin/cute.html" target="_blank" rel="noopener noreferrer">CUTE</a></div></div></details>
     <details><summary>CUTEについて</summary><div class="detail-body"><p>モバイルCUTE 2日券：大人2,100円／人。市電・市バス・カゴシマシティビュー・サクラジマアイランドビュー・桜島フェリーが対象です。</p><p>デジタル購入にはインターネット接続が必要。購入後の変更・払戻しはできません。空港連絡バス、阪急、大阪モノレール、航空便、徒歩は対象外です。</p></div></details>
-    <p class="bottom">PWA V1.1。初回のオンライン読み込み後は旅程をオフラインで閲覧できます。外部の地図・時刻表・公式サイトの閲覧には通信が必要です。</p>
+    <p class="bottom">PWA V1.1.1。初回のオンライン読み込み後は旅程をオフラインで閲覧できます。外部の地図・時刻表・公式サイトの閲覧には通信が必要です。</p>
   </main>
   <div class="update-banner" id="update-banner" role="status" aria-live="polite" hidden><span>新しいバージョンがあります</span><button type="button" id="apply-update">更新する</button></div>
   <script>
@@ -281,7 +269,7 @@
   <script>
     (() => {
       // H3 の既存ハンドラと DOM 補正の後で、選択項目だけを端末内へ保存する。
-      document.querySelector('.subtitle').textContent = '当日用しおり PWA V1.1｜時刻は交通のみ予定発→予定着';
+      document.querySelector('.subtitle').textContent = '当日用しおり PWA V1.1.1｜時刻は交通のみ予定発→予定着';
       const storageKey = 'kagoshima-trip-pwa-v1-selection';
       const allowed = {
         day: ['14', '15'], evening: ['base', 'hotel'],
@@ -364,16 +352,6 @@
       });
     })();
   </script>
-  <section class="journey-nav" id="journey-nav" aria-label="工程ナビ" hidden>
-    <button type="button" class="journey-toggle" id="journey-toggle" aria-expanded="false" aria-controls="journey-panel">
-      <span class="journey-summary" aria-live="polite"><span id="journey-current-name">現在工程を設定してください</span><span id="journey-next-name">各カードから設定できます</span></span><span id="journey-toggle-label">展開</span>
-    </button>
-    <div id="journey-panel" hidden>
-      <div class="journey-nav-actions"><button type="button" id="journey-current-jump" disabled>現在へ</button><button type="button" id="journey-next-jump" disabled>次へ</button><button type="button" id="journey-finish" disabled>完了して次へ</button></div>
-      <p class="journey-message" id="journey-count"></p><p class="journey-message" id="journey-notice" aria-live="polite"></p>
-    </div>
-    <p id="journey-save-warning" role="status" hidden></p>
-  </section>
   <script id="journey-nav-code">
 (() => {
   'use strict';
@@ -479,162 +457,262 @@
       : ['15-common',...(['A','B','C','D'].includes(selection.plan)?['15-'+selection.plan,'15-flight']:[])];
     return groups.flatMap(group=>definitions.filter(x=>x.group===group));
   }
+  const BRANCHES = {14:['14-base','14-hotel'],15:['15-A','15-B','15-C','15-D']};
+  const branchLabels={'14-base':'基本案','14-hotel':'ホテル休憩案','15-A':'A案','15-B':'B案','15-C':'C案','15-D':'D案'};
+  const memberships=new Map();
+  for(const entry of definitions) {
+    if(!memberships.has(entry.logicalId))memberships.set(entry.logicalId,new Set());
+    memberships.get(entry.logicalId).add(entry.group);
+  }
+  const owner=id=>{
+    const groups=[...(memberships.get(id)||[])];
+    return groups.length===1 && [...BRANCHES[14],...BRANCHES[15]].includes(groups[0])?groups[0]:null;
+  };
   function createModel(raw) {
-    let original = {}, canPersist = true, warning = '';
+    let original={},canPersist=true,warning='';
     try {
-      if (raw !== null && raw !== undefined) {
-        original = JSON.parse(raw);
-        if (!original || original.schemaVersion !== 1 || !original.days || typeof original.days !== 'object') throw new Error('unknown schema');
+      if(raw!==null && raw!==undefined) {
+        original=JSON.parse(raw);
+        if(!original || original.schemaVersion!==1 || !original.days || typeof original.days!=='object' || Array.isArray(original.days))throw new Error('unknown schema');
       }
-    } catch (_) { original={};canPersist=false;warning='保存済みの進捗を読み込めません。元データを上書きせず、この起動中だけ操作できます。'; }
-    const state = {...original,schemaVersion:1,days:{...original.days}};
-    for (const day of ['14','15']) {
-      const saved = original.days?.[day];
-      const obj = saved && typeof saved==='object' ? saved : {};
-      state.days[day] = {...obj,current:typeof obj.current==='string'?obj.current:null,
-        completed:[...new Set(Array.isArray(obj.completed)?obj.completed.filter(x=>typeof x==='string'):[])],ended:obj.ended===true};
+    } catch(_) {
+      original={};canPersist=false;
+      warning='保存済みの進捗を読み込めません。元データを上書きせず、この起動中だけ操作できます。';
     }
-    const next = (day,selection) => {
-      const items=route(day,selection), i=items.findIndex(x=>x.logicalId===state.days[day].current);
-      return i>=0?items[i+1] || null:null;
+    const state={...original,schemaVersion:1,days:{...original.days}};
+    for(const day of ['14','15']) {
+      const saved=original.days?.[day],obj=saved && typeof saved==='object'?saved:{};
+      if(saved!==undefined && (!saved || typeof saved!=='object' || Array.isArray(saved)) ||
+        obj.completed!==undefined && (!Array.isArray(obj.completed) || obj.completed.some(x=>typeof x!=='string'))) {
+        canPersist=false;warning='進捗データに不正な値があります。元データを上書きせず、この起動中だけ操作できます。';
+      }
+      // Preserve current/ended and other old fields for compatibility; never use them to resume.
+      state.days[day]={...obj,completed:[...new Set(Array.isArray(obj.completed)?obj.completed.filter(x=>typeof x==='string'):[])]};
+    }
+    const historyBranches=day=>BRANCHES[day].filter(group=>state.days[day].completed.some(id=>owner(id)===group));
+    const conflictsFor=(day,id)=>{
+      const own=owner(id);
+      if(!own)return [];
+      return state.days[day].completed.filter(x=>owner(x) && owner(x)!==own && BRANCHES[day].includes(owner(x)));
     };
+    function resume(requestedDay,selection) {
+      const known=day=>state.days[day].completed.filter(id=>logicalByDay[day].has(id));
+      const global=requestedDay===null;
+      const day=requestedDay || (known('15').length?'15':'14');
+      const histories=historyBranches(day);
+      if(histories.length>1)return {day,status:'conflict',branches:histories};
+      const chosen=histories[0] || (day==='14'?(selection.evening==='hotel'?'14-hotel':'14-base'):
+        ['A','B','C','D'].includes(selection.plan)?'15-'+selection.plan:null);
+      const entries=definitions.filter(x=>x.day===day);
+      const common=entries.filter(x=>x.group===day+'-common');
+      const tail=entries.filter(x=>x.group===(day==='14'?'14-return':'15-flight'));
+      const target=entry=>({day,status:'target',entry,branch:chosen});
+      const completed=known(day);
+      if(!completed.length)return target(common[0]);
+      // Search all known completion IDs, including hidden courses. Selection never filters this search.
+      const candidates=completed.map(id=>entries.find(x=>x.logicalId===id && x.group===chosen) || entries.find(x=>x.logicalId===id));
+      const phase=x=>x.group===day+'-common'?0:x.group===(day==='14'?'14-return':'15-flight')?2:1;
+      const rank=x=>x.logicalId==='s14.adimori-dinner'||x.logicalId==='s15.airport-bus'?1000:x.order;
+      candidates.sort((a,b)=>phase(a)-phase(b)||rank(a)-rank(b));
+      const last=candidates.at(-1);
+      if(phase(last)===0) {
+        const next=common.find(x=>x.order===last.order+1);
+        if(next)return target(next);
+        if(!chosen)return {day,status:'choose-course'};
+        return target(entries.find(x=>x.group===chosen));
+      }
+      if(phase(last)===1) {
+        if(last.logicalId==='s14.adimori-dinner'||last.logicalId==='s15.airport-bus')return target(tail[0]);
+        const next=entries.find(x=>x.group===last.group && x.order===last.order+1);
+        return target(next || tail[0]);
+      }
+      const next=tail.find(x=>x.order===last.order+1);
+      if(next)return target(next);
+      if(global && day==='14')return resume('15',selection);
+      return {day,status:global?'trip-ended':'day-ended'};
+    }
     return {
-      state,canPersist,warning,route,next,
-      reconcile(day,selection) {
-        const current=state.days[day].current;
-        if(current && !route(day,selection).some(x=>x.logicalId===current)) {
-          state.days[day].current=null;state.days[day].ended=false;return true;
-        }
-        return false;
-      },
-      setCurrent(day,id,selection) {
-        if(!route(day,selection).some(x=>x.logicalId===id)) return false;
-        state.days[day].current=id;state.days[day].ended=false;return true;
-      },
-      finish(day,selection) {
-        const current=state.days[day].current;
-        if(!route(day,selection).some(x=>x.logicalId===current)) return {changed:false};
-        if(!state.days[day].completed.includes(current)) state.days[day].completed.push(current);
-        const following=next(day,selection);
-        state.days[day].current=following?.logicalId || null;
-        const needsCourse=day==='15' && !['A','B','C','D'].includes(selection.plan);
-        state.days[day].ended=!following && !needsCourse;
-        return {changed:true,needsCourse:!following && needsCourse};
+      state,canPersist,warning,historyBranches,conflictsFor,resume,route,
+      complete(day,id,approve=false) {
+        if(!logicalByDay[day].has(id))return {changed:false};
+        if(state.days[day].completed.includes(id))return {changed:false};
+        const conflicts=conflictsFor(day,id);
+        if(conflicts.length && !approve)return {changed:false,needsConfirmation:true,conflicts};
+        const removal=new Set(conflicts);
+        state.days[day].completed=state.days[day].completed.filter(x=>!removal.has(x));
+        state.days[day].completed.push(id);
+        return {changed:true,removed:conflicts};
       },
       cancel(day,id) {
-        if(!logicalByDay[day].has(id)) return false;
+        if(!logicalByDay[day].has(id))return false;
         const old=state.days[day].completed.length;
         state.days[day].completed=state.days[day].completed.filter(x=>x!==id);
         return old!==state.days[day].completed.length;
       },
-      serialize() { return JSON.stringify(state); }
+      serialize(){return JSON.stringify(state);}
     };
   }
-  // The same pure model is loaded by a small Node test without a browser.
-  if (typeof document === 'undefined') { globalThis.journeyNavTest={NAV_KEY,GROUPS,definitions,route,createModel};return; }
-  const nav=document.getElementById('journey-nav');
-  const notice=document.getElementById('journey-notice');
-  const saveWarning=document.getElementById('journey-save-warning');
+  if(typeof document==='undefined'){globalThis.journeyNavTest={NAV_KEY,GROUPS,definitions,route,createModel};return;}
+  const feedback=document.getElementById('journey-feedback');
   try {
-    const cards=new Map();
-    for (const group of GROUPS) {
+    const cards=new Map(),folds=[];
+    // Bind the original DOM before introducing any accordion wrappers.
+    for(const group of GROUPS) {
       let elements=[...document.querySelectorAll(group.selector)];
-      if(group.key==='14-common') elements=elements.filter(x=>x.getAttribute('aria-label')!=='11月14日夕食後').flatMap(x=>[...x.querySelectorAll('.card')]);
+      if(group.key==='14-common')elements=elements.filter(x=>x.getAttribute('aria-label')!=='11月14日夕食後').flatMap(x=>[...x.querySelectorAll('.card')]);
       const entries=definitions.filter(x=>x.group===group.key);
-      if(elements.length!==entries.length) throw new Error('card count: '+group.key);
+      if(elements.length!==entries.length)throw new Error('card count: '+group.key);
       for(const entry of entries) {
         const matches=elements.filter(x=>x.querySelector('h3')?.textContent.trim()===entry.title);
-        if(matches.length!==1) throw new Error('card mapping: '+entry.displayId);
+        if(matches.length!==1)throw new Error('card mapping: '+entry.displayId);
         const card=matches[0];
-        card.dataset.displayStepId=entry.displayId;card.dataset.logicalStepId=entry.logicalId;
-        card.id=entry.displayId;card.tabIndex=-1;
+        card.id=entry.displayId;card.dataset.displayStepId=entry.displayId;card.dataset.logicalStepId=entry.logicalId;
         cards.set(entry.displayId,card);
       }
     }
-    if(cards.size!==document.querySelectorAll('article.card').length) throw new Error('unmapped card');
-    for (const entry of definitions) {
-        const card=cards.get(entry.displayId);
-        const controls=document.createElement('div');controls.className='journey-card-tools';
-        const flags=document.createElement('span');flags.className='journey-flags';
-        const currentFlag=document.createElement('span');currentFlag.className='journey-current-flag';currentFlag.textContent='現在';currentFlag.hidden=true;
-        const doneFlag=document.createElement('span');doneFlag.className='journey-done-flag';doneFlag.textContent='完了';doneFlag.hidden=true;
-        flags.append(currentFlag,doneFlag);
-        const set=document.createElement('button');set.type='button';set.textContent='ここを現在に設定';set.className='journey-set';
-        set.setAttribute('aria-label',entry.title+'を現在に設定');
-        const undo=document.createElement('button');undo.type='button';undo.className='journey-undo';undo.textContent='完了を取り消す';undo.hidden=true;
-        undo.setAttribute('aria-label',entry.title+'の完了を取り消す');
-        controls.append(flags,set,undo);card.append(controls);
-        set.addEventListener('click',()=>{if(model.setCurrent(entry.day,entry.logicalId,selection())){notice.textContent='';save();render();}});
-        undo.addEventListener('click',()=>{if(model.cancel(entry.day,entry.logicalId)){save();render();}});
-    }
-    let raw=null, readFailed=false;
-    try { raw=localStorage.getItem(NAV_KEY); } catch (_) { readFailed=true; }
+    if(cards.size!==document.querySelectorAll('article.card').length)throw new Error('unmapped card');
+    let raw=null,readFailed=false;
+    try{raw=localStorage.getItem(NAV_KEY);}catch(_){readFailed=true;}
     const model=createModel(raw);
-    const selection=() => ({evening:document.querySelector('[data-evening][aria-pressed="true"]')?.dataset.evening || 'base',
+    let storageWarning=readFailed?'保存領域を利用できません。進捗はこの起動中だけ保持される可能性があります。':model.warning;
+    const selection=()=>({evening:document.querySelector('[data-evening][aria-pressed="true"]')?.dataset.evening || 'base',
       plan:[...document.querySelectorAll('[id^="plan-"]')].find(x=>!x.hidden)?.id.slice(5) || null});
-    const activeDay=()=>document.querySelector('.tab[aria-selected="true"]')?.dataset.day || '14';
-    function warn(text) { saveWarning.textContent=text;saveWarning.hidden=!text; }
-    function save() {
-      if(!model.canPersist){warn(model.warning);return;}
-      try{localStorage.setItem(NAV_KEY,model.serialize());warn('');}
-      catch(_){warn('進捗を端末に保存できませんでした。画面上の操作は反映されていますが、再起動で失われる可能性があります。');}
-    }
-    function reconcile() {
-      let changed=false;
-      for(const day of ['14','15']) changed=model.reconcile(day,selection()) || changed;
-      if(changed){notice.textContent='コース変更または工程変更により現在工程を解除しました。カードから手動で再設定してください。';save();}
-    }
-    function render() {
-      const day=activeDay(), selected=selection(), items=model.route(day,selected), data=model.state.days[day];
-      for(const entry of definitions) {
-        const card=cards.get(entry.displayId), ds=model.state.days[entry.day];
-        const done=ds.completed.includes(entry.logicalId), current=ds.current===entry.logicalId;
-        card.classList.toggle('journey-current',current);card.classList.toggle('journey-done',done);
-        if(current)card.setAttribute('aria-current','step');else card.removeAttribute('aria-current');
-        card.querySelector('.journey-current-flag').hidden=!current;card.querySelector('.journey-done-flag').hidden=!done;
-        card.querySelector('.journey-undo').hidden=!done;card.querySelector('.journey-set').setAttribute('aria-pressed',String(current));
+    function save(card) {
+      if(!model.canPersist)storageWarning=model.warning;
+      else {
+        try{localStorage.setItem(NAV_KEY,model.serialize());storageWarning='';}
+        catch(_){storageWarning='進捗を端末に保存できませんでした。画面上の変更は反映されていますが、再起動で失われる可能性があります。';}
       }
-      const current=items.find(x=>x.logicalId===data.current), next=model.next(day,selected);
-      document.getElementById('journey-current-name').textContent=current?'現在：'+current.title:data.ended?'この日は終了しました':'現在工程を設定してください';
-      document.getElementById('journey-next-name').textContent=next?'次：'+next.title+'｜'+cards.get(next.displayId).querySelector('.time').textContent.trim():
-        day==='15'&&!selected.plan?'末よし後はコースを選択してください':current?'次の工程はありません':data.ended?'別の工程へ戻る場合はカードから設定':'各カードの「ここを現在に設定」を押してください';
-      document.getElementById('journey-current-jump').disabled=!current;
-      document.getElementById('journey-next-jump').disabled=!next;
-      document.getElementById('journey-finish').disabled=!current;
-      document.getElementById('journey-count').textContent='11/'+day+'・選択中の工程：完了 '+items.filter(x=>data.completed.includes(x.logicalId)).length+' / '+items.length;
+      if(card){const p=card.querySelector('.journey-operation-warning');p.textContent=storageWarning;p.hidden=!storageWarning;}
     }
-    function jump(next=false) {
-      const day=activeDay(), items=model.route(day,selection());
-      const entry=next?model.next(day,selection()):items.find(x=>x.logicalId===model.state.days[day].current);
-      if(!entry)return;
-      const card=cards.get(entry.displayId);
-      card.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
-      card.focus({preventScroll:true});
+    for(const entry of definitions) {
+      const card=cards.get(entry.displayId),tools=document.createElement('div');tools.className='journey-card-tools';
+      const flag=document.createElement('span');flag.className='journey-done-flag';flag.textContent='✓ 完了';flag.hidden=true;
+      const button=document.createElement('button');button.type='button';button.className='journey-toggle-done';
+      const warning=document.createElement('p');warning.className='journey-operation-warning';warning.setAttribute('role','status');warning.hidden=true;
+      tools.append(flag,button);card.append(tools,warning);
+      button.addEventListener('click',()=>{
+        if(model.state.days[entry.day].completed.includes(entry.logicalId)) {
+          if(model.cancel(entry.day,entry.logicalId))save(card);
+        } else {
+          let result=model.complete(entry.day,entry.logicalId);
+          if(result.needsConfirmation) {
+            const counts={};result.conflicts.forEach(id=>{const group=owner(id);counts[group]=(counts[group]||0)+1;});
+            const text=Object.entries(counts).map(([group,count])=>branchLabels[group]+'の完了済み工程'+count+'件').join('、');
+            if(!window.confirm(text+'が解除されます。続けますか？'))return;
+            result=model.complete(entry.day,entry.logicalId,true);
+          }
+          if(result.changed)save(card);
+        }
+        render(); // No scrolling or automatic accordion changes on completion/cancellation.
+      });
     }
-    document.getElementById('journey-current-jump').addEventListener('click',()=>jump());
-    document.getElementById('journey-next-jump').addEventListener('click',()=>jump(true));
-    document.getElementById('journey-finish').addEventListener('click',()=>{
-      const result=model.finish(activeDay(),selection());
-      if(!result.changed)return;
-      notice.textContent=result.needsCourse?'共通工程が完了しました。末よし退店時刻と優先コースを選び、次のカードを現在に設定してください。':'';
-      save();render();
-    });
-    const toggle=document.getElementById('journey-toggle'), panel=document.getElementById('journey-panel');
-    toggle.addEventListener('click',()=>{panel.hidden=!panel.hidden;toggle.setAttribute('aria-expanded',String(!panel.hidden));document.getElementById('journey-toggle-label').textContent=panel.hidden?'展開':'閉じる';measure();});
-    document.querySelectorAll('.tab,[data-evening],[data-exit],[data-priority]').forEach(b=>b.addEventListener('click',()=>{reconcile();render();}));
-    function measure(){document.documentElement.style.setProperty('--journey-height',nav.getBoundingClientRect().height+'px');}
-    if('ResizeObserver' in window)new ResizeObserver(measure).observe(nav);else window.addEventListener('resize',measure);
-    if(readFailed)warn('保存領域を利用できません。進捗はこの起動中だけ保持される可能性があります。');
-    if(!model.canPersist)warn(model.warning);
-    nav.hidden=false;reconcile();render();measure();
+    function fold(head,body) {
+      const details=document.createElement('details');details.className='journey-section';details.open=false;
+      const summary=document.createElement('summary');
+      const name=document.createElement('span');name.className='journey-section-name';name.textContent=head.textContent;
+      const count=document.createElement('span');count.className='journey-section-count';
+      summary.append(name,count);head.before(details);head.hidden=true;body.classList.add('journey-group-body');
+      details.append(summary,head,body);folds.push({details,count,cardList:[...body.querySelectorAll('.card')]});
+    }
+    for(const head of document.querySelectorAll('#day14 > .group,#day15 > .group')) {
+      const body=head.nextElementSibling;
+      if(body?.classList.contains('timeline'))fold(head,body);
+    }
+    for(const variant of ['evening-base','evening-hotel']) {
+      const root=document.getElementById(variant);fold(root.querySelector('.group'),root.querySelector('.timeline'));
+    }
+    for(const plan of ['A','B','C','D']) {
+      const root=document.getElementById('plan-'+plan);fold(root.querySelector('h2'),root.querySelector('.timeline'));
+    }
+    const flight=document.querySelector('#day15 > .return-block'),flightBody=document.createElement('div');
+    flightBody.className='timeline';flightBody.append(...flight.querySelectorAll('.card'));
+    fold(flight.querySelector('h2'),flightBody);
+    if(document.querySelectorAll('article.card[data-display-step-id]').length!==definitions.length)throw new Error('accordion lost cards');
+    function conflictWarning() {
+      return ['14','15'].filter(day=>model.historyBranches(day).length>1).map(day=>
+        '11/'+day+'に複数コースの完了履歴があります。続けるコースの固有工程を完了にすると、確認後に他案の履歴を解除できます。').join(' ');
+    }
+    function render(extra='') {
+      for(const entry of definitions) {
+        const card=cards.get(entry.displayId),done=model.state.days[entry.day].completed.includes(entry.logicalId);
+        card.classList.toggle('journey-done',done);
+        card.querySelector('.journey-done-flag').hidden=!done;
+        const button=card.querySelector('.journey-toggle-done');button.textContent=done?'取消':'完了';
+        button.setAttribute('aria-pressed',String(done));button.setAttribute('aria-label',entry.title+(done?'の完了を取り消す':'を完了にする'));
+      }
+      for(const {count,cardList}of folds) {
+        const done=cardList.filter(card=>model.state.days[definitions.find(x=>x.displayId===card.id).day].completed.includes(card.dataset.logicalStepId)).length;
+        count.textContent=done+' / '+cardList.length;
+      }
+      feedback.textContent=[extra,conflictWarning(),storageWarning].filter(Boolean).join(' ');
+      feedback.hidden=!feedback.textContent;
+    }
+    function displayDay(day) {
+      document.querySelectorAll('.tab').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.day===day)));
+      document.getElementById('day14').hidden=day!=='14';document.getElementById('day15').hidden=day!=='15';
+      const ramen=[...document.querySelectorAll('details')].find(x=>x.querySelector('summary')?.textContent.trim()==='ラーメン候補を見る');
+      ramen.hidden=day!=='15';
+    }
+    function displayBranch(group) {
+      if(group?.startsWith('14-')) {
+        const value=group==='14-hotel'?'hotel':'base';
+        document.querySelectorAll('[data-evening]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.evening===value)));
+        document.getElementById('evening-base').hidden=value!=='base';document.getElementById('evening-hotel').hidden=value!=='hotel';
+      } else if(group?.startsWith('15-')) {
+        const plan=group.slice(3);
+        exitChoice=['A','C'].includes(plan)?'early':'late';priorityChoice=['A','B'].includes(plan)?'sengan':'shiroyama';
+        document.querySelectorAll('[data-exit]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.exit===exitChoice)));
+        document.querySelectorAll('[data-priority]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.priority===priorityChoice)));
+        document.querySelectorAll('[id^="plan-"]').forEach(p=>{p.hidden=p.id!=='plan-'+plan;});
+        status.textContent='おすすめ工程を表示しました。';status.classList.add('ready');
+      }
+    }
+    function saveSelection() {
+      try {
+        const key='kagoshima-trip-pwa-v1-selection';
+        let old={};try{const parsed=JSON.parse(localStorage.getItem(key)||'{}');if(parsed && typeof parsed==='object')old=parsed;}catch(_){}
+        localStorage.setItem(key,JSON.stringify({...old,
+          day:document.querySelector('.tab[aria-selected="true"]').dataset.day,
+          evening:document.querySelector('[data-evening][aria-pressed="true"]').dataset.evening,
+          exit:exitChoice,priority:priorityChoice}));
+      } catch(_){storageWarning='日付・コースの表示選択を端末に保存できませんでした。';}
+    }
+    let scrollRequest=0;
+    function applyResume(requestedDay=null) {
+      const result=model.resume(requestedDay,selection());
+      displayDay(result.day);displayBranch(result.branch);
+      folds.forEach(x=>{x.details.open=false;});
+      saveSelection();
+      let message='';
+      if(result.status==='target') {
+        const card=cards.get(result.entry.displayId),section=folds.find(x=>x.cardList.includes(card));
+        if(!section)throw new Error('resume target not grouped');
+        section.details.open=true;
+        const token=++scrollRequest;
+        requestAnimationFrame(()=>{
+          if(token!==scrollRequest)return;
+          const html=document.documentElement,previous=html.style.scrollBehavior;
+          html.style.scrollBehavior='auto';
+          card.scrollIntoView({behavior:'auto',block:'start'});
+          requestAnimationFrame(()=>{html.style.scrollBehavior=previous;});
+        });
+      } else {
+        ++scrollRequest;
+        if(result.status==='choose-course')message='共通工程の続きはA〜Dコースの選択が必要です。末よし退店時刻と優先する観光を選んでください。';
+        else if(result.status==='trip-ended')message='旅行全工程が終了しています。';
+        else if(result.status==='day-ended')message='11/'+result.day+'の最後の工程まで完了しています。';
+        window.scrollTo({top:0,behavior:'auto'});
+      }
+      render(message);
+    }
+    document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>applyResume(b.dataset.day)));
+    document.querySelectorAll('[data-evening],[data-exit],[data-priority]').forEach(b=>b.addEventListener('click',()=>render()));
+    applyResume();
   } catch(error) {
-    document.querySelectorAll('.journey-card-tools').forEach(x=>x.remove());
-    nav.hidden=false;document.getElementById('journey-current-name').textContent='工程ナビを初期化できませんでした';
-    document.getElementById('journey-next-name').textContent='旅程と既存の切替・リンクは引き続き利用できます。';
-    notice.textContent='工程カードとID対応を確認してください。';
-    document.getElementById('journey-toggle').disabled=true;
-    document.documentElement.style.setProperty('--journey-height',nav.getBoundingClientRect().height+'px');
-    console.error('Journey navigation:',error);
+    document.querySelectorAll('.journey-card-tools,.journey-operation-warning').forEach(x=>x.remove());
+    feedback.hidden=false;feedback.textContent='工程の完了機能を初期化できませんでした。旅程と既存の切替・リンクは引き続き利用できます。';
+    console.error('Journey completion:',error);
   }
 })();
   </script>
