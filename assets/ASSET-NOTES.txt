@@ -1,0 +1,12 @@
+V1.4 FIX1 image production record
+ChatGPTで生成したAI画像／ユーザーが採用した素材。
+Source: user-supplied 画像.zip (six JPGs and the approved four-screen reference PNG).
+桜島_chatgpt.jpg → sakurajima.webp (HOME)
+市電_chatgpt.jpg → tram.webp (ITINERARY)
+天文館_chatgpt.jpg → tenmonkan.webp (ROUTE header)
+仙厳園_chatgpt.jpg → senganen.webp (ROUTE Senganen choice)
+城山展望台_chatgpt.jpg → shiroyama.webp (ROUTE Shiroyama choice)
+天文館むじゃき_chatgpt.jpg → shirokuma.webp (EXPENSES)
+Processing: aspect-preserving resize to max 1280px wide, WebP quality 84; CSS object-fit for display. No recoloring, text insertion or regeneration.
+AI images are decorative; depicted signage is not transport or itinerary information. No external stock photographs or hotlinks.
+AI generation alone is not a guarantee regarding all third-party rights.

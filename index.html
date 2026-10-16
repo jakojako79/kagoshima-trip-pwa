@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#123a5a">
+  <meta name="theme-color" content="#294B3E">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="鹿児島旅行">
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
-  <title>鹿児島旅行 2026/11/14-15｜PWA V1.3</title>
+  <title>鹿児島旅行 2026/11/14-15｜PWA V1.4 FIX2</title>
   <style>
     :root{--navy:#123a5a;--blue:#176ca3;--blue-pale:#eaf5fb;--green:#087d62;--green-pale:#e2f5ef;--warm:#a55c20;--warm-pale:#fff3e8;--sand:#f7f4ed;--ink:#17212b;--muted:#5b6670;--line:#d5dde3;--card:#fff;--shadow:0 2px 10px rgba(17,43,65,.09)}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;overflow-x:hidden;background:var(--sand);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;font-size:16px;line-height:1.55;-webkit-text-size-adjust:100%}button,a{font:inherit;-webkit-tap-highlight-color:transparent}button{cursor:pointer}[hidden]{display:none!important}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #ffba35;outline-offset:2px}.shell{width:min(100%,720px);margin:auto}.topbar{padding:max(16px,env(safe-area-inset-top)) 16px 14px;background:var(--navy);color:#fff}h1{margin:0;font-size:clamp(1.3rem,5vw,1.65rem);line-height:1.25}.subtitle{margin:4px 0 0;color:#d9ecf8;font-size:.92rem}.notice{margin:0;padding:10px 14px;border-bottom:1px solid #e7cf91;background:#fff4d9;color:#634400;font-size:.87rem}.day-nav{position:sticky;top:0;z-index:20;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 16px;background:rgba(247,244,237,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}.tab,.choice{min-height:46px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--navy);font-weight:800}.tab[aria-selected="true"]{border-color:var(--navy);background:var(--navy);color:#fff;box-shadow:0 2px 7px rgba(18,58,90,.25)}main{padding:14px 12px 36px}.day{display:grid;gap:16px}.info,.decision,details,.plan{border:1px solid var(--line);border-radius:14px;background:var(--card);box-shadow:var(--shadow)}.info{padding:14px}.info h2,.decision h2,.plan h2{margin:0 0 7px;color:var(--navy);font-size:1.08rem}.flight-grid{display:grid;gap:8px}.flight{padding:9px 10px;border-radius:10px;background:#f2f7fa;font-size:.92rem}.flight strong{display:inline-block;min-width:2.8em;color:var(--navy)}.section-title{margin:8px 4px 0;color:var(--navy);font-size:1.16rem;line-height:1.35}.lead{margin:-7px 4px 0;color:var(--muted);font-size:.9rem}.group{margin:12px 4px -4px;color:var(--navy);font-size:.88rem;font-weight:800;letter-spacing:.04em}.timeline{display:grid;gap:10px}.card{position:relative;min-height:86px;padding:12px 12px 12px 72px;border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:var(--shadow)}.card:before{position:absolute;top:18px;bottom:-15px;left:33px;width:2px;background:#c6d6e2;content:""}.timeline>.card:last-child:before{display:none}.icon{position:absolute;top:16px;left:16px;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--blue-pale);color:var(--navy);font-size:1.08rem}.walk .icon{background:#edf5ea;color:#377441}.food .icon{background:var(--warm-pale);color:var(--warm)}.visit .icon{background:#f1eefb;color:#61459b}.hotel .icon{background:#f0f2f4;color:#45545e}.wait .icon{background:#fff4d9;color:#79550a}.time{margin:0 0 3px;color:var(--navy);font-size:.88rem;font-weight:850;letter-spacing:.01em}.time span{color:#7890a1;padding:0 2px}.card h3{margin:0;color:#182b39;font-size:1rem;line-height:1.37}.mode,.note{margin:3px 0 0}.mode{color:var(--muted);font-size:.88rem}.note{color:#725610;font-size:.82rem}.badges,.actions{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}.badge{display:inline-flex;align-items:center;min-height:25px;padding:2px 9px;border-radius:999px;background:var(--green-pale);color:#075e4a;font-size:.77rem;font-weight:800;letter-spacing:.02em}.link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 13px;border:1px solid #a5c6da;border-radius:10px;background:#fff;color:#075e91;font-size:.88rem;font-weight:750;line-height:1.15;text-decoration:none}.link:hover{background:var(--blue-pale)}.decision{padding:15px}.decision p{margin:0;color:var(--muted);font-size:.9rem}.question{margin-top:14px}.question h3{margin:0 0 8px;font-size:1rem}.choices{display:grid;grid-template-columns:1fr 1fr;gap:8px}.choice{padding:8px;text-align:center}.choice small{display:block;color:var(--muted);font-size:.76rem;font-weight:500}.choice[aria-pressed="true"]{border-color:var(--navy);background:var(--blue-pale);box-shadow:inset 0 0 0 1px var(--navy)}.status{min-height:48px;margin-top:13px;padding:10px 12px;border-radius:10px;background:#f2f7fa;color:#385365;font-size:.9rem}.status.ready{background:var(--green-pale);color:#075e4a;font-weight:700}.plan{padding:15px;border-color:#8cc4b5}.kicker{margin:0 0 3px;color:var(--green);font-size:.83rem;font-weight:800}.variant{display:grid;gap:10px}.variant[hidden]{display:none!important}.in-plan .card{box-shadow:none}.in-plan .card:before{bottom:-15px}.return-block{display:grid;gap:10px}.warning{padding:10px 12px;border-radius:10px;background:#fff4d9;color:#70500a;font-size:.86rem}details{overflow:clip}summary{display:flex;align-items:center;min-height:52px;padding:12px 14px;color:var(--navy);font-weight:850;cursor:pointer;list-style:none}summary::-webkit-details-marker{display:none}summary:after{margin-left:auto;content:"＋";font-size:1.24rem}details[open] summary{border-bottom:1px solid var(--line)}details[open] summary:after{content:"−"}.detail-body{padding:0 14px 14px}.detail-list,.ramen-list{display:grid;gap:8px;margin-top:10px}.detail-link{width:100%;justify-content:flex-start}.detail-link:after{margin-left:auto;color:var(--muted);content:"↗"}.ramen{padding:10px;border-radius:11px;background:#f4f7f8}.ramen h3{margin:0;color:var(--navy);font-size:1rem}.ramen p{margin:3px 0 0;color:var(--muted);font-size:.84rem}.small{font-size:.84rem}.bottom{margin:2px 4px;color:var(--muted);font-size:.82rem;text-align:center}@media(min-width:600px){main{padding:20px 20px 40px}.day-nav{padding-inline:20px}.flight-grid{grid-template-columns:1fr 1fr}.card{padding-left:84px}.icon{left:21px}.choices{max-width:520px}}
@@ -71,17 +71,176 @@
     .card[data-display-step-id]>.journey-card-mode{display:flex;align-items:center;flex-wrap:wrap;gap:4px 6px;margin-top:2px;min-width:0}
     .card[data-display-step-id]>.journey-card-mode>.mode{margin:0;min-width:0}
     .card[data-display-step-id]>.journey-card-mode>.badges{margin:0;flex-shrink:0}
+  
+    /* V1.4 visual layer; selectors preserve the existing DOM and behavior. */
+    :root{--navy:#294B3E;--blue:#294B3E;--blue-pale:#edf2e9;--green:#294B3E;--green-pale:#e4eddf;--warm:#785b35;--warm-pale:#f6efdf;--sand:#F5F4ED;--ink:#25372D;--muted:#59675b;--line:#d7ddcf;--card:#FFFEFB;--shadow:0 2px 9px rgba(41,75,62,.045)}
+    body{background:var(--sand);color:var(--ink)}
+    .topbar{position:relative;isolation:isolate;overflow:hidden;min-height:166px;padding:max(14px,env(safe-area-inset-top)) 20px 16px;display:flex;align-items:flex-end;background:#294b3e}
+    .topbar:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(24,49,38,.94),rgba(24,49,38,.5) 57%,rgba(24,49,38,.08)),url('./assets/sakurajima.webp') center 55%/cover no-repeat}
+    .topbar>.shell{position:relative}
+    .journal-kicker{margin:0 0 8px;color:#e4e9d5;font-size:10px;letter-spacing:.18em;font-weight:700}
+    h1{font-family:"Yu Mincho","Hiragino Mincho ProN",Georgia,serif;font-size:clamp(1.55rem,5.8vw,2rem);font-weight:700;letter-spacing:.015em;line-height:1.35;color:#fffefb;max-width:640px;text-wrap:balance}
+    .subtitle{color:#e1e8d9;font-size:.82rem;max-width:600px;margin-top:7px}
+    .notice{background:#eeeede;color:#4a593e;border-color:#d8ddc9;font-size:.84rem}
+    .day-nav{background:rgba(245,244,237,.98);border-color:var(--line);gap:7px}
+    .tab,.cost-tab{border-color:#ced7c8;border-radius:9px;background:#fffefb;color:var(--navy);box-shadow:none}
+    .tab[aria-selected="true"],.cost-tab[aria-selected="true"]{background:#294b3e;border-color:#294b3e;color:#fffefb;box-shadow:0 2px 5px rgba(41,75,62,.13)}
+    .tab:focus-visible,.cost-tab:focus-visible,.choice:focus-visible,.link:focus-visible,.journey-toggle-done:focus-visible,summary:focus-visible{outline-color:#ad8037}
+    .info,.decision,details,.plan{background:var(--card);border-color:var(--line);border-radius:12px;box-shadow:var(--shadow)}
+    .info h2,.decision h2,.plan h2,.section-title,.cost-screen>h2{color:var(--navy);letter-spacing:.02em}
+    .section-title,.cost-screen>h2{display:flex;align-items:center;gap:8px;font-family:"Yu Mincho","Hiragino Mincho ProN",Georgia,serif;font-weight:800}
+    .journal-mark{display:inline-block;flex:none;width:50px;height:34px;color:#42634b;vertical-align:middle}
+    .section-title .journal-mark{width:46px;height:30px}
+    .flight{background:#f0f2e9;border:1px solid #e3e6db}
+    .flight a{color:#294b3e}
+    .lead{color:#59675b}
+    .card{background:var(--card);border-color:#d9dfd1;border-radius:12px;color:var(--ink);box-shadow:var(--shadow)}
+    .card h3{color:#25372d}
+    .time{color:#294b3e;font-size:.93rem;font-variant-numeric:tabular-nums}
+    .time span{color:#78917a}
+    .card:before{background:#c6d1bc}
+    .icon{background:#ecf0e6;color:#385b43}
+    .walk .icon,.food .icon,.visit .icon,.hotel .icon,.wait .icon{background:#edf0e7;color:#3e5c44}
+    .mode{color:#59675b}
+    .note{color:#725329}
+    .badge{background:#e3eddd;color:#294b3e}
+    .link{background:#fffefb;border-color:#b8c9af;color:#294b3e;min-width:44px}
+    .link:hover{background:#edf2e7}
+    .card .journey-card-tools button{background:#f1f3eb;border-color:#b8c9af;color:#294b3e}
+    .card .journey-toggle-done[aria-pressed="true"],.journey-done-flag{background:#e3eddd;border-color:#a3bc99;color:#294b3e}
+    .decision{border-top:3px solid #7c9e87;padding-top:13px}
+    .choice{background:#fffefb;border-color:#cbd5c2;color:#294b3e}
+    .choice[aria-pressed="true"]{background:#e6eddf;border-color:#42634b;box-shadow:inset 0 0 0 1px #42634b}
+    .status{background:#f0f2e9;color:#53644c}
+    .status.ready{background:#e3eddd;color:#294b3e}
+    .plan{border-color:#a4ba98}
+    .kicker{color:#42634b}
+    .journey-section{border-color:#d0d9c5;border-radius:11px;background:#fffefb;box-shadow:none}
+    .journey-section>summary{background:#eef1e6;color:#294b3e;min-height:52px}
+    .journey-section-name{letter-spacing:.015em}
+    .journey-section-count{color:#596b54}
+    .journey-group-body{background:#f7f7f0}
+    .journey-feedback,.journey-operation-warning,.warning{background:#f5eddb;color:#71552e}
+    .detail-link:after{color:#7c9373}
+    .ramen{background:#f0f2e9}
+    .ramen h3{color:#294b3e}.ramen p{color:#59675b}
+    .cost-screen>h2{margin:0 0 8px}
+    .cost-summary>div{background:#294b3e;border-color:#294b3e;box-shadow:none;color:#fffefb}
+    .cost-summary h2{color:#edf2e6;font-size:.94rem}
+    .cost-summary strong{color:#fffefb;font-variant-numeric:tabular-nums}
+    .cost-summary p{color:#d4e1ce}
+    .cost-category,.cost-item h3,.cost-screen h2{color:#294b3e}
+    .cost-summary h2{color:#edf2e6}
+    .cost-item,.cost-add{background:#fffefb;border-color:#d7ddcf}
+    .cost-screen input:not([type="file"]){background:#fffefb;color:#25372d;border-color:#b8c9af}
+    .cost-screen input:focus-visible{outline:2px solid #42634b;outline-offset:2px}
+    .cost-screen input[aria-invalid="true"]{border-color:#a74126;outline-color:#a74126}
+    .cost-button{background:#fffefb;color:#294b3e;border-color:#b8c9af}
+    .cost-delete{color:#795a31}
+    .cost-status{background:#e3eddd;color:#294b3e}
+    .cost-status.cost-error,.cost-item-note{background:#f5eddb;color:#71552e}
+    .update-banner{background:#fffefb;border-color:#b8c9af;color:#294b3e}
+    .update-banner button{background:#294b3e;color:#fffefb}
+    .bottom{color:#617057}
+    @media(min-width:600px){.topbar{min-height:178px;padding-inline:24px}.topbar:before{background-position:center 52%}}
+  
+/* V1.4 FIX1: presentation only; original cards, handlers and data remain intact. */
+.legacy-topbar{display:none!important}
+body{padding-bottom:calc(70px + env(safe-area-inset-bottom))}
+.journal-toolbar{background:#294b3e;color:#fffefb;padding:env(safe-area-inset-top) 12px 0}
+.journal-toolbar .shell{display:flex;align-items:center;gap:8px;min-height:54px}
+.journal-home-back{border:0;background:transparent;color:inherit;min-width:44px;min-height:44px;font-size:1.4rem}
+.journal-toolbar h2{margin:0;font-size:1.08rem;letter-spacing:.05em;font-family:"Yu Mincho",Georgia,serif}
+.journal-toolbar .eyebrow{margin-left:auto;font-size:.6rem;letter-spacing:.12em}
+.journal-screen{padding:0 0 24px}
+.journal-hero{position:relative;overflow:hidden;background:#294b3e;color:#fffefb}
+.journal-hero img{display:block;width:100%;height:100%;object-fit:cover}
+.journal-hero .hero-copy{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;background:linear-gradient(transparent 35%,rgba(22,48,35,.76))}
+.journal-hero h2{margin:0;color:#fffefb;font-size:1.5rem;font-family:"Yu Mincho",Georgia,serif;letter-spacing:.06em}
+.journal-hero p{margin:4px 0 0;font-size:.8rem}
+.home-cover{height:365px}
+.home-cover img{object-position:50% 45%}
+.home-cover .hero-copy{justify-content:flex-start;align-items:center;text-align:center;padding:32px 16px 18px;background:linear-gradient(rgba(22,48,35,.26),transparent 52%,rgba(22,48,35,.75))}
+.home-cover .cover-english{font-family:Georgia,serif;letter-spacing:.21em;font-size:.8rem;line-height:1.7;text-shadow:0 1px 5px #294b3e}
+.home-cover h1{font-size:2.4rem;letter-spacing:.12em;margin:12px 0 8px;text-shadow:0 2px 6px #294b3e}
+.home-cover .cover-date{font-size:.85rem;letter-spacing:.04em;text-shadow:0 1px 5px #294b3e}
+.home-cover .cover-caption{margin-top:auto;letter-spacing:.08em;font-family:"Yu Mincho",Georgia,serif;font-size:.94rem}
+#home-screen{background:#294b3e;padding-bottom:24px}
+.home-menu{display:grid;gap:10px;padding:18px 18px 8px}
+.home-menu button{width:100%;display:flex;align-items:center;gap:14px;text-align:left;background:#fffefb;border:1px solid #d4dccb;border-radius:9px;color:#294b3e;min-height:75px;padding:12px 16px}
+.home-menu .menu-icon{width:31px;height:31px;flex:none;stroke:currentColor;fill:none;stroke-width:1.4}
+.home-menu strong{display:block;font-size:1.06rem;font-family:"Yu Mincho",Georgia,serif}
+.home-menu small{display:block;margin-top:3px;font-size:.73rem;color:#59675b}
+.home-menu .chevron{margin-left:auto;font-size:1.4rem}
+.home-signoff{margin:13px 0 0;text-align:center;color:#d9e4d5;font-family:Georgia,serif;font-size:.8rem;letter-spacing:.16em}
+.itinerary-hero{height:155px}
+.itinerary-hero img{object-position:50% 54%}
+.itinerary-hero .hero-copy{padding:14px 18px}
+.itinerary-hero h2{font-size:1.3rem}
+.route-hero{height:139px}
+.route-content{padding:14px 12px 20px}
+#route-screen .decision{border-top:0;box-shadow:none;padding:14px}
+#route-screen .decision>h2{font-family:"Yu Mincho",Georgia,serif;font-size:1.12rem}
+#route-screen .decision>h2,#route-screen .decision>p:not(.status){position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+#route-screen .question{margin-top:14px}
+#route-screen .question:first-of-type{margin-top:0}
+#route-screen .question h3{font-size:.94rem;line-height:1.5}
+#route-screen .question:first-of-type .choices{grid-template-columns:1fr}
+#route-screen .choice{min-height:48px;font-weight:700}
+#route-screen .choices{max-width:none}
+#route-screen .choice[data-priority]{display:flex;flex-direction:column;align-items:stretch;padding:0;overflow:hidden;font-size:.87rem;position:relative;text-align:center}
+.route-choice-photo{width:100%;height:112px;object-fit:cover;display:block;margin-bottom:9px}
+#route-screen .choice[data-priority]{padding-bottom:9px}
+#route-screen .choice[data-priority][aria-pressed="true"]:after{content:"✓ 選択中";position:absolute;top:7px;right:7px;padding:3px 6px;background:#294b3e;color:#fffefb;border-radius:5px;font-size:.72rem}
+.route-confirm{width:100%;min-height:50px;border:1px solid #294b3e;border-radius:9px;color:#fffefb;background:#294b3e;padding:11px 14px;font-weight:750;margin-top:14px}
+.route-confirm:disabled{background:#dfe5d9;border-color:#ccd5c6;color:#59675b;cursor:default}
+.route-guidance{margin:8px 3px 0;font-size:.83rem;color:#59675b}
+.route-invitation{padding:13px;border:1px solid #b8c9af;border-radius:11px;background:#f0f3e8}
+.route-invitation p{margin:0 0 9px;font-size:.88rem}
+.route-invitation button{min-height:44px;background:#294b3e;color:#fffefb;border:0;border-radius:8px;padding:9px 14px;font:inherit;font-weight:700}
+.day-nav{grid-template-columns:1fr 1fr}
+#tab-cost{display:none}
+.expenses-intro{display:flex;align-items:center;gap:12px;margin-bottom:12px;min-height:139px}
+.expenses-intro>div{flex:1;min-width:0}
+.expenses-intro .expense-english{font-size:.66rem;letter-spacing:.13em;color:#59675b;margin:0 0 6px}
+.expenses-intro h2{font-family:"Yu Mincho",Georgia,serif;margin:0;font-size:1.3rem;line-height:1.5;letter-spacing:.04em}
+.expenses-intro img{display:block;width:43%;max-width:170px;height:145px;object-fit:contain;border-radius:9px}
+.expenses-intro .intro-caption{font-size:.8rem;margin:7px 0 0;color:#59675b}
+.expenses-intro .journal-mark{display:none}
+.journal-bottom-nav{position:fixed;z-index:25;bottom:0;left:0;right:0;background:#fffefb;border-top:1px solid #d0d9c5;padding-bottom:env(safe-area-inset-bottom)}
+.journal-bottom-nav>.shell{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));min-height:61px}
+.journal-bottom-nav button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-width:0;min-height:56px;padding:6px 2px;background:none;border:0;color:#59675b;font-size:.72rem}
+.journal-bottom-nav svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.5}
+.journal-bottom-nav button[aria-current="page"]{color:#294b3e;background:#edf2e9;font-weight:800}
+.update-banner{bottom:calc(76px + env(safe-area-inset-bottom));z-index:35}
+body:not([data-journal-view="itinerary"])>.notice,body:not([data-journal-view="itinerary"])>.day-nav,body:not([data-journal-view="itinerary"])>#journey-feedback{display:none!important}
+@media(min-width:600px){.home-cover{height:430px}.home-menu{padding-inline:30px}.route-content{padding-inline:20px}.route-choice-photo{height:155px}}
+
+  
+    /* V1.4 FIX2: only the three reviewed spacing issues. */
+    body[data-journal-view="home"]{padding-bottom:calc(62px + env(safe-area-inset-bottom))}
+    body[data-journal-view="home"] #home-screen{min-height:calc(100vh - 62px - env(safe-area-inset-bottom));min-height:calc(100dvh - 62px - env(safe-area-inset-bottom))}
+    #day15-airport > .card[data-step-token="airport-bus"]{margin-top:14px}
+    #route-screen #route-status{margin-top:14px}
   </style>
 </head>
-<body>
-  <header class="topbar"><div class="shell"><h1>鹿児島旅行 2026/11/14-15</h1><p class="subtitle">当日用しおり H2｜時刻は交通のみ予定発→予定着</p></div></header>
+<body data-journal-view="home">
+<header class="journal-toolbar" id="journal-toolbar" hidden><div class="shell"><button class="journal-home-back" type="button" data-journal-go="home" aria-label="HOMEへ戻る">‹</button><h2 id="journal-screen-title">旅のスケジュール</h2><span class="eyebrow" aria-hidden="true">TRAVEL JOURNAL</span></div></header>
+<main class="shell journal-screen" id="home-screen" aria-label="HOME">
+ <div class="journal-hero home-cover"><img src="./assets/sakurajima.webp" alt="桜島と鹿児島市街を描いたAI画像" width="1280" height="720"><div class="hero-copy"><p class="cover-english">KAGOSHIMA<br>TRAVEL JOURNAL</p><h1>鹿児島旅行</h1><p class="cover-date">2026.11.14（土）– 11.15（日）</p><p class="cover-caption">桜島を望む、ふたりの旅へ。</p></div></div>
+ <nav class="home-menu" aria-label="旅のメニュー"><button type="button" data-journal-go="itinerary"><svg class="menu-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 2v6m8-6v6M4 11h16m-11 5h6"/></svg><span><strong>旅のスケジュール</strong><small>2日間の旅程と、旅の続きを確認</small></span><span class="chevron" aria-hidden="true">›</span></button><button type="button" data-journal-go="route"><svg class="menu-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20c0-7 16-9 16-15M7 20a3 3 0 1 0-6 0 3 3 0 0 0 6 0Zm16-16a3 3 0 1 0-6 0 3 3 0 0 0 6 0Z"/></svg><span><strong>観光ルートを選ぶ</strong><small>11/15 午後の過ごし方を選択</small></span><span class="chevron" aria-hidden="true">›</span></button><button type="button" data-journal-go="expenses"><svg class="menu-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="M3 8V5l13-3v3m5 6h-7v5h7m-4-2h1"/></svg><span><strong>旅の費用管理</strong><small>予定と実績を、この端末に記録</small></span><span class="chevron" aria-hidden="true">›</span></button></nav><p class="home-signoff">Have a wonderful trip.</p>
+</main>
+<main class="shell journal-screen" id="route-screen" aria-label="観光ルートを選ぶ" hidden><div class="journal-hero route-hero"><img src="./assets/tenmonkan.webp" alt="天文館のアーケードを描いたAI画像" width="1280" height="853"><div class="hero-copy"><h2>観光ルートを選ぶ</h2><p>11/15｜3つの条件で、午後の旅を。</p></div></div><div class="route-content" id="route-content"><button type="button" id="journal-route-confirm" class="route-confirm" disabled>このルートで旅程を見る</button><p id="journal-route-guidance" class="route-guidance" role="status">3つの条件を選んでください。</p></div></main>
+<div class="shell journal-hero itinerary-hero" id="itinerary-hero" hidden><img src="./assets/tram.webp" alt="鹿児島の市電を描いたAI画像" width="1280" height="853"><div class="hero-copy"><p id="journal-day-kicker">DAY 01 · 2026</p><h2 id="journal-day-title">11月14日（土）</h2></div></div>
+
+  <header class="topbar legacy-topbar" hidden><div class="shell"><p class="journal-kicker" aria-hidden="true">KAGOSHIMA TRAVEL JOURNAL</p><h1>鹿児島旅行 2026/11/14-15</h1><p class="subtitle">当日用しおり H2｜時刻は交通のみ予定発→予定着</p></div></header>
   <p class="notice shell">11/13と当日朝に、運休・臨時ダイヤ・飲食店営業を再確認。空港連絡バスは満席時に次便案内となる場合があります。</p>
   <nav class="day-nav shell" aria-label="日程切替"><button class="tab" type="button" role="tab" id="tab14" aria-controls="day14" aria-selected="true" data-day="14">11/14（土）</button><button class="tab" type="button" role="tab" id="tab15" aria-controls="day15" aria-selected="false" data-day="15">11/15（日）</button><button class="cost-tab" type="button" role="tab" id="tab-cost" aria-controls="cost-screen" aria-selected="false">費用</button></nav>
   <p class="journey-feedback shell" id="journey-feedback" role="status" hidden></p>
   <main class="shell" id="trip-main">
     <section class="day" id="day14" role="tabpanel" aria-labelledby="tab14">
       <section class="info"><h2>基本情報</h2><div class="flight-grid"><div class="flight"><strong>往路</strong>11/14 07:05 伊丹 → 08:30 鹿児島</div><div class="flight"><strong>復路</strong>11/15 17:40 鹿児島 → 18:55 伊丹</div><div class="flight"><strong>宿泊</strong><a href="https://solaria-kagoshima.nnr-h.com/" target="_blank" rel="noopener noreferrer">ソラリア西鉄ホテル鹿児島（公式）</a></div><div class="flight"><strong>CUTE</strong>2日券・大人2,100円／人</div></div></section>
-      <h2 class="section-title">11/14（土）</h2><p class="lead">丸一 → 桜島 → むじゃき → 西郷隆盛銅像 → あぢもり（19:00）</p>
+      <h2 class="section-title"><svg class="journal-mark" viewBox="0 0 80 52" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 40h72M8 35l13-7 9-13 7 6 5-7 8 14 10 3 12 5M23 33l8-10 5 5m7-5 7 11M8 46h13m9 0h20m10 0h12M40 7c-6-7 7-5 2-12"/></g></svg>11/14（土）</h2><p class="lead">丸一 → 桜島 → むじゃき → 西郷隆盛銅像 → あぢもり（19:00）</p>
       <p class="group">自宅最寄り → 伊丹空港</p>
       <section class="timeline" aria-label="11月14日 朝の移動">
         <article class="card transport"><span class="icon">🚋</span><p class="time">05:13 <span>→</span> 05:21</p><h3>阪急塚口 → 十三</h3><p class="mode">阪急神戸線</p><div class="actions"><a class="link" href="https://www.hankyu.co.jp/station/html/HK-06_ko_1_h.html" target="_blank" rel="noopener noreferrer">時刻表</a></div></article>
@@ -138,7 +297,7 @@
     </section>
 
     <section class="day" id="day15" role="tabpanel" aria-labelledby="tab15" hidden>
-      <h2 class="section-title">11/15（日）</h2><p class="lead">西郷像の見学有無・末よし退店時刻・優先観光地で1コースを表示</p>
+      <h2 class="section-title"><svg class="journal-mark" viewBox="0 0 80 52" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 45h72M8 25l13-10h17l12 10H8Zm7 0v20m29-20v20M21 30v9m15-9v9M54 45V25l8-10 8 10v20M58 31h8m-8 7h8M9 10l9-4m40 0 10 5M22 25v20m15-20v20"/></g></svg>11/15（日）</h2><p class="lead">西郷像の見学有無・末よし退店時刻・優先観光地で1コースを表示</p>
       <p class="group">共通工程｜ホテル → 末よし</p><section class="timeline" aria-label="11月15日 共通工程">
         <article class="card hotel"><span class="icon">🧳</span><p class="time">08:45 <span>→</span> 09:05頃</p><h3>ホテルでチェックアウト・荷物預け</h3><p class="mode">ホテル</p></article>
         <article class="card walk"><span class="icon">🚶</span><p class="time">09:05頃 <span>→</span> 09:10頃</p><h3>ホテル → 鹿児島中央駅前電停</h3><p class="mode">徒歩</p><div class="actions"><a class="link" href="https://www.google.com/maps/search/?api=1&query=%E9%B9%BF%E5%85%90%E5%B3%B6%E4%B8%AD%E5%A4%AE%E9%A7%85%E5%89%8D%E9%9B%BB%E5%81%9C" target="_blank" rel="noopener noreferrer">地図</a></div></article>
@@ -283,10 +442,10 @@
     <details><summary>主要リンク</summary><div class="detail-body"><div class="detail-list"><a class="link detail-link" href="https://www.hankyu.co.jp/" target="_blank" rel="noopener noreferrer">阪急</a><a class="link detail-link" href="https://www.osaka-monorail.co.jp/" target="_blank" rel="noopener noreferrer">大阪モノレール</a><a class="link detail-link" href="https://nangoku-kotsu.com/wp-content/uploads/pdf/airport_2026_0401.pdf" target="_blank" rel="noopener noreferrer">鹿児島空港連絡バス</a><a class="link detail-link" href="https://www.kotsu-city-kagoshima.jp/" target="_blank" rel="noopener noreferrer">鹿児島市電</a><a class="link detail-link" href="https://www.city.kagoshima.lg.jp/sakurajima-ferry/koro-jikoku/timetable.html" target="_blank" rel="noopener noreferrer">桜島フェリー</a><a class="link detail-link" href="https://www.kotsu-city-kagoshima.jp/wp/timesearch/" target="_blank" rel="noopener noreferrer">観光バス（シティビュー等）</a><a class="link detail-link" href="https://www.city.kagoshima.lg.jp/sakurajima-ferry/unchin/cute.html" target="_blank" rel="noopener noreferrer">CUTE</a></div></div></details>
     <details><summary>CUTEについて</summary><div class="detail-body"><p>モバイルCUTE 2日券：大人2,100円／人。市電・市バス・カゴシマシティビュー・サクラジマアイランドビュー・桜島フェリーが対象です。</p><p>デジタル購入にはインターネット接続が必要。購入後の変更・払戻しはできません。空港連絡バス、阪急、大阪モノレール、航空便、徒歩は対象外です。</p></div></details>
     <details id="progress-settings"><summary>しおりの設定</summary><div class="detail-body"><button type="button" class="cost-button" id="reset-progress">工程の完了をリセット</button><p class="small">両日の全コースの完了履歴を解除します。日付・コース選択と費用は維持します。次回起動時は11/14の最初から再開します。</p></div></details>
-    <p class="bottom">PWA V1.3。初回のオンライン読み込み後は旅程をオフラインで閲覧できます。外部の地図・時刻表・公式サイトの閲覧には通信が必要です。</p>
+    <p class="bottom">PWA V1.4。初回のオンライン読み込み後は旅程をオフラインで閲覧できます。外部の地図・時刻表・公式サイトの閲覧には通信が必要です。</p>
   </main>
   <main class="shell cost-screen" id="cost-screen" role="tabpanel" aria-labelledby="tab-cost" hidden>
-    <h2>費用</h2>
+    <h2><svg class="journal-mark" viewBox="0 0 80 52" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 17h48a4 4 0 0 1 4 4v22H14a5 5 0 0 1-5-5V16a5 5 0 0 1 5-5h42v6M52 27h18v11H52zM20 7h23v10M24 29h13m-13 7h8"/><circle cx="58" cy="32.5" r="1"/></g></svg>費用</h2>
     <p class="cost-help">夫婦2人分の合計を日本円・0以上の整数で入力してください。空欄は未入力、0円は入力済みとして扱います。</p>
     <p class="cost-help">この端末内に保存されます。費用入力の正本はXiaomi 15T Proです。端末間の自動同期はありません。</p>
     <div class="cost-summary" aria-live="polite"><div><h2>予定額</h2><strong id="cost-planned-sum">未入力</strong><p id="cost-planned-count"></p></div><div><h2>実績額</h2><strong id="cost-actual-sum">未入力</strong><p id="cost-actual-count"></p></div></div>
@@ -303,7 +462,8 @@
     </div></details>
   </main>
   <div class="update-banner" id="update-banner" role="status" aria-live="polite" hidden><span>新しいバージョンがあります</span><button type="button" id="apply-update">更新する</button></div>
-  <script>
+  <nav class="journal-bottom-nav" aria-label="画面切替"><div class="shell"><button type="button" data-journal-go="home" aria-current="page"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 3l9 8M5 9v12h5v-7h4v7h5V9"/></svg><span>ホーム</span></button><button type="button" data-journal-go="itinerary"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 2v6m8-6v6M4 11h16m-11 5h6"/></svg><span>旅程</span></button><button type="button" data-journal-go="route"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20c0-7 16-9 16-15M7 20a3 3 0 1 0-6 0 3 3 0 0 0 6 0Zm16-16a3 3 0 1 0-6 0 3 3 0 0 0 6 0Z"/></svg><span>ルート</span></button><button type="button" data-journal-go="expenses"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="M3 8V5l13-3v3m5 6h-7v5h7m-4-2h1"/></svg><span>費用</span></button></div></nav>
+<script>
     const tabs=document.querySelectorAll('.tab'), days={14:document.getElementById('day14'),15:document.getElementById('day15')};
     tabs.forEach(tab=>tab.addEventListener('click',()=>{const d=tab.dataset.day;tabs.forEach(t=>t.setAttribute('aria-selected',String(t===tab)));Object.entries(days).forEach(([key,p])=>p.hidden=key!==d);window.scrollTo({top:0,behavior:'smooth'});}));
     const PLAN_CHOICES=[{"id":"sengan-no-saigo-early","priority":"sengan","statue":"seen","exit":"early","title":"仙巌園｜西郷像なし｜11:15退店"},{"id":"sengan-no-saigo-late","priority":"sengan","statue":"seen","exit":"late","title":"仙巌園｜西郷像なし｜11:45退店"},{"id":"sengan-saigo-early","priority":"sengan","statue":"unseen","exit":"early","title":"仙巌園｜西郷像あり｜11:15退店"},{"id":"sengan-saigo-late","priority":"sengan","statue":"unseen","exit":"late","title":"仙巌園｜西郷像あり｜11:45退店"},{"id":"shiroyama-no-saigo-early","priority":"shiroyama","statue":"seen","exit":"early","title":"城山・西郷史跡｜西郷像なし｜11:15退店"},{"id":"shiroyama-no-saigo-late","priority":"shiroyama","statue":"seen","exit":"late","title":"城山・西郷史跡｜西郷像なし｜11:45退店"},{"id":"shiroyama-saigo-early","priority":"shiroyama","statue":"unseen","exit":"early","title":"城山・西郷史跡｜西郷像あり｜11:15退店"},{"id":"shiroyama-saigo-late","priority":"shiroyama","statue":"unseen","exit":"late","title":"城山・西郷史跡｜西郷像あり｜11:45退店"}];
@@ -352,7 +512,7 @@
   <script>
     (() => {
       // H3 の既存ハンドラと DOM 補正の後で、選択項目だけを端末内へ保存する。
-      document.querySelector('.subtitle').textContent = '当日用しおり PWA V1.3｜時刻は交通のみ予定発→予定着';
+      document.querySelector('.subtitle').textContent = '当日用しおり PWA V1.4｜時刻は交通のみ予定発→予定着';
       const storageKey = 'kagoshima-trip-pwa-v1-selection';
       const allowed = {
         day: ['14', '15'], statue: ['seen', 'unseen'],
@@ -887,7 +1047,7 @@
       }
       render(message);
     }
-    document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>applyResume(b.dataset.day)));
+    document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{if(!document.documentElement.hasAttribute('data-route-opening'))applyResume(b.dataset.day);}));
     document.querySelectorAll('[data-statue],[data-exit],[data-priority]').forEach(b=>b.addEventListener('click',()=>render()));
     document.getElementById('reset-progress').addEventListener('click',()=>{
       if(!window.confirm('11/14・11/15の全コース（非表示のコースを含む）の完了履歴を解除します。日付・コース選択・旅程・費用・アプリ設定は維持します。次回起動は11/14の最初から再開します。続けますか？'))return;
@@ -896,7 +1056,7 @@
       if(save())render('工程の完了をリセットしました。次回起動は11/14の最初から再開します。');
       else {for(const day of ['14','15'])model.state.days[day].completed=previous[day];render('保存できなかったため、完了履歴はリセットしていません。');}
     });
-    applyResume();
+    render();
   } catch(error) {
     document.querySelectorAll('.journey-card-tools,.journey-operation-warning').forEach(x=>x.remove());
     feedback.hidden=false;feedback.textContent='工程の完了機能を初期化できませんでした。旅程と既存の切替・リンクは引き続き利用できます。';
@@ -1112,5 +1272,76 @@
   render();
 })();
   </script>
+<script id="journal-screens-code">
+/* Four-screen presentation adapter. Existing itinerary and expense handlers own data. */
+(() => {
+  'use strict';
+  const byId=id=>document.getElementById(id);
+  const home=byId('home-screen'),route=byId('route-screen'),trip=byId('trip-main'),cost=byId('cost-screen');
+  const decision=document.querySelector('.decision[aria-labelledby="route-title"]');
+  const invitation=document.createElement('div');invitation.className='route-invitation';
+  invitation.innerHTML='<p>11/15の午後は、観光ルート画面で3つの条件を選んでください。</p><button type="button" data-journal-go="route">観光ルートを選ぶ</button>';
+  decision.replaceWith(invitation);byId('route-content').prepend(decision);
+  for(const [value,file] of [['sengan','senganen.webp'],['shiroyama','shiroyama.webp']]){
+    const button=decision.querySelector('[data-priority="'+value+'"]');
+    const image=document.createElement('img');image.className='route-choice-photo';image.src='./assets/'+file;image.alt='';image.width=640;image.height=427;image.setAttribute('aria-hidden','true');button.prepend(image);
+  }
+  const intro=document.createElement('header');intro.className='expenses-intro';
+  const introText=document.createElement('div');introText.innerHTML='<p class="expense-english">TRAVEL EXPENSES</p>';
+  const heading=cost.querySelector('h2');heading.id='journal-expenses-title';heading.lastChild.textContent='旅の費用管理';introText.append(heading);
+  const caption=document.createElement('p');caption.className='intro-caption';caption.textContent='旅の予定と実績を、ひとつに。';introText.append(caption);
+  const photo=document.createElement('img');photo.src='./assets/shirokuma.webp';photo.alt='白くまを描いたAI画像';photo.width=340;photo.height=255;
+  intro.append(introText,photo);cost.prepend(intro);cost.setAttribute('aria-labelledby','journal-expenses-title');
+  let current='home',switching=false,lastDay=byId('day15').hidden?'14':'15';
+  const titles={home:'鹿児島旅行',itinerary:'旅のスケジュール',route:'観光ルートを選ぶ',expenses:'旅の費用管理'};
+  function ready(){return ['statue','exit','priority'].every(key=>decision.querySelector('[data-'+key+'][aria-pressed="true"]'));}
+  function routeStatus(){
+    const selected=ready();byId('journal-route-confirm').disabled=!selected;
+    byId('journal-route-guidance').textContent=selected?byId('route-status').textContent:'3つの条件を選んでください。';
+  }
+  function dateCaption(){
+    const day=document.querySelector('.tab[aria-selected="true"]')?.dataset.day||lastDay;
+    lastDay=day;
+    byId('journal-day-kicker').textContent=(day==='14'?'DAY 01':'DAY 02')+' · 2026';
+    byId('journal-day-title').textContent=day==='14'?'11月14日（土）':'11月15日（日）';
+  }
+  function display(view){
+    current=view;document.body.dataset.journalView=view;
+    home.hidden=view!=='home';route.hidden=view!=='route';trip.hidden=view!=='itinerary';cost.hidden=view!=='expenses';
+    byId('journal-toolbar').hidden=view==='home';byId('itinerary-hero').hidden=view!=='itinerary';
+    byId('journal-screen-title').textContent=titles[view];
+    document.querySelectorAll('.journal-bottom-nav [data-journal-go]').forEach(b=>{
+      if(b.dataset.journalGo===view)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');
+    });routeStatus();dateCaption();
+  }
+  function open(view,{push=true,day=null,explicitRoute=false}={}){
+    if(!Object.hasOwn(titles,view))view='home';
+    const previous=current;switching=true;
+    try{
+      if(view==='itinerary'){
+        const chosenDay=day||document.querySelector('.tab[aria-selected="true"]')?.dataset.day||lastDay;
+        if(explicitRoute)document.documentElement.setAttribute('data-route-opening','');
+        try{byId('tab'+chosenDay).click();}finally{document.documentElement.removeAttribute('data-route-opening');}
+      }else if(view==='expenses')byId('tab-cost').click();
+      display(view);
+    }finally{switching=false;}
+    if(push&&previous!==view)history.pushState({journalView:view},'', '#'+view);
+    window.scrollTo({top:0,behavior:'instant'});
+  }
+  document.addEventListener('click',event=>{
+    const button=event.target.closest('[data-journal-go]');if(!button)return;
+    const view=button.dataset.journalGo;
+    open(view,{day:view==='itinerary'&&current==='home'?'14':null,explicitRoute:current==='route'});
+  });
+  document.querySelectorAll('.tab').forEach(button=>button.addEventListener('click',()=>{
+    dateCaption();if(!switching){display('itinerary');if(history.state?.journalView!=='itinerary')history.pushState({journalView:'itinerary'},'','#itinerary');}
+  }));
+  decision.querySelectorAll('[data-statue],[data-exit],[data-priority]').forEach(b=>b.addEventListener('click',routeStatus));
+  byId('journal-route-confirm').addEventListener('click',()=>{if(ready())open('itinerary',{day:'15',explicitRoute:true});else routeStatus();});
+  window.addEventListener('popstate',event=>open(event.state?.journalView||'home',{push:false,explicitRoute:true}));
+  history.replaceState({journalView:'home'},'','#home');display('home');
+})();
+
+</script>
 </body>
 </html>
