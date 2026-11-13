@@ -1,11 +1,11 @@
 // リリース時に本体ファイルを変更した場合は、この識別子も更新する。
-const CACHE_NAME = 'kagoshima-trip-pwa-v1.5-fix1-20261113-1';
+const CACHE_NAME = 'kagoshima-trip-pwa-v1.5-fix2-20261113-1';
 const CACHE_PREFIX = 'kagoshima-trip-pwa-';
 const APP_SHELL = [
   './', './index.html', './manifest.webmanifest',
   './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png',
   './assets/sakurajima.webp', './assets/tram.webp', './assets/tenmonkan.webp',
-  './assets/senganen.webp', './assets/shiroyama.webp', './assets/shirokuma.webp', './assets/ASSET-NOTES.txt'
+  './assets/senganen.webp', './assets/shiroyama.webp', './assets/shirokuma.webp', './assets/ASSET-NOTES.txt', './assets/ishin-furusatokan.webp'
 ];
 const appRoot = new URL('./', self.registration.scope);
 const shellUrls = new Set(APP_SHELL.map(path => new URL(path, appRoot).href));
