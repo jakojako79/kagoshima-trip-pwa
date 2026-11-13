@@ -1,5 +1,5 @@
 // リリース時に本体ファイルを変更した場合は、この識別子も更新する。
-const CACHE_NAME = 'kagoshima-trip-pwa-v1.4-fix2-20261017-1';
+const CACHE_NAME = 'kagoshima-trip-pwa-v1.5-fix1-20261113-1';
 const CACHE_PREFIX = 'kagoshima-trip-pwa-';
 const APP_SHELL = [
   './', './index.html', './manifest.webmanifest',
@@ -35,7 +35,7 @@ self.addEventListener('fetch', event => {
   // 外部URL・同一オリジンの別アプリ・未登録ファイルは対象外。
   if (url.origin !== self.location.origin || !url.pathname.startsWith(appRoot.pathname)) return;
   if (request.mode === 'navigate') {
-    if (url.href !== appRoot.href && url.href !== appPage) return;
+    if (url.pathname !== appRoot.pathname && url.pathname !== new URL(appPage).pathname) return;
     event.respondWith(caches.open(CACHE_NAME).then(cache => cache.match(appPage)));
     return;
   }
